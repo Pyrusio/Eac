@@ -1,0 +1,16 @@
+[
+{
+  "modid": "Eac",
+  "name": "Enders Aerial Cast",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "credits": "Created by Abchrisabc",
+  "logoFile": "/Eac.png",
+  "url": "http://the-eac.nl/",
+  "updateUrl": "",
+  "authors": [ "Abchrisabc" ],
+  "screenshots": [],
+  "dependencies": []
+}
+]
