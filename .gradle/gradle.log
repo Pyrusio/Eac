@@ -7,37 +7,28 @@ The assetDir is deprecated!  Use runDir instead! runDir set to eclipse/assets/..
  R4wk, ZeuX, IngisKahn      
  MCP Data version : unknown
 ****************************
-:extractUserDev
-:extractNatives
-:genSrgs
+:compileApiJava UP-TO-DATE
+:processApiResources UP-TO-DATE
+:apiClasses UP-TO-DATE
+:sourceMainJava UP-TO-DATE
+:compileJava UP-TO-DATE
+:processResources
+:classes
+:jar
+:extractUserDev UP-TO-DATE
 :getAssetsIndex
 :getAssets
-:makeStartwarning: [options] bootstrap class path not set in conjunction with -source 1.6
-1 warning
-
-:downloadMcpTools
-:downloadClient SKIPPED
-:downloadServer SKIPPED
-:mergeJars SKIPPED
-:deobfuscateJar SKIPPED
-:decompile SKIPPED
-:processSources SKIPPED
-:remapJar SKIPPED
-:extractMinecraftSrc
-:recompMinecraftwarning: [options] bootstrap class path not set in conjunction with -source 1.6
-Note: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-1 warning
-
-:repackMinecraft
-:setupDecompWorkspace
-:eclipseClasspath
-:eclipseJdt
-:eclipseProject
-:eclipse
+:makeStart SKIPPED
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:genSrgs SKIPPED
+:reobf
+:assemble
+:check UP-TO-DATE
+:build
 
 BUILD SUCCESSFUL
 
-Total time: 3 mins 42.746 secs
+Total time: 29.555 secs
