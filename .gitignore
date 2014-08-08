@@ -61,5 +61,5 @@ org.*
 #gradle
 build
 .gradle
-.bat
+*.bat
 
