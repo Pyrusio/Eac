@@ -33,6 +33,7 @@ public class eacItem extends Eac
 		GameRegistry.registerItem(dustair, "Air_Dust");
 		GameRegistry.registerItem(dustairact, "Active_Air_Dust");
 		GameRegistry.registerItem(ingotair, "Air_Ingot");
+		GameRegistry.registerItem(ingotshadow, "Shadow_Ingot");
 		// Tools
 		GameRegistry.registerItem(bladedblood, "Dead_Blood_Blade");
 		GameRegistry.registerItem(aersword, "Aerial_Sword");
