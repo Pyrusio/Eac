@@ -20,7 +20,7 @@ public class ItemAirArmor extends ItemArmor
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
 	{
-		if (stack.getItem() == eacItem.airHelmet || stack.getItem() == eacItem.airChest || stack.getItem() == eacItem.airBoots)
+		if (stack.getItem() == eacItem.airHelmet || stack.getItem() == eacItem.airChestPlate || stack.getItem() == eacItem.airBoots)
 		{
 			return ModInfo.ID.toLowerCase() + ":models/armor/airArmor1.png";
 		}
