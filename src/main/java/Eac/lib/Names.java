@@ -9,6 +9,7 @@ public class Names
 	public static final String AirDust_unlocalizedName = "dustAir";
 	public static final String actairdust_unlocalizedName = "dustAirAct";
 	public static final String ingotAir_unlocalizedName = "ingotAir";
+	public static final String ingotShadow_unlocalizedName = "ingotShadow";
 	public static final String AirPickaxe_unlocalizedName = "airPick";
 	public static final String AirAxe_unlocalizedName = "airAxe";
 	public static final String AirSword_unlocalizedName = "airSword";

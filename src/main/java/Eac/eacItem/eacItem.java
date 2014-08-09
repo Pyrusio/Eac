@@ -13,6 +13,7 @@ public class eacItem extends Eac
 		dustair = new ItemDustAir();
 		dustairact = new ItemDustAirActiv();
 		ingotair = new ItemIngotAir();
+		ingotshadow = new ItemIngotShadow();
 		// Tools
 		bladedblood = new ItemBladedBlood(enderblood);
 		aersword = new ItemAerSword(aerial);

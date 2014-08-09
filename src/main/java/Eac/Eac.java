@@ -31,6 +31,7 @@ public class Eac
 	public static Item dustair;
 	public static Item dustairact;
 	public static Item ingotair;
+	public static Item ingotshadow;
 	// tools
 	public static Item aersword;
 	public static Item bladedblood;
