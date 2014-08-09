@@ -21,6 +21,7 @@ public class BlockOreAir extends Block
 		setResistance(5.0F);
 		setLightLevel(0.5F);
 		setHarvestLevel("pickaxe", 2);
+		setCreativeTab(Eac.tabs.Main.tabEac);
 
 	}
 

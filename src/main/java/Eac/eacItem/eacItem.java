@@ -31,12 +31,12 @@ public class eacItem extends Eac
 		shadowhoe = new ItemShadowHoe(shadowToolMaterial);
 		// Air Armor
 		airHelmet = new ItemAirArmor(airArmorMaterial, 0, "airHelmet");
-		airChestPlate = new ItemAirArmor(airArmorMaterial, 1, "airChest");
+		airChestPlate = new ItemAirArmor(airArmorMaterial, 1, "airChestPlate");
 		airLegs = new ItemAirArmor(airArmorMaterial, 2, "airLegs");
 		airBoots = new ItemAirArmor(airArmorMaterial, 3, "airBoots");
 		// Shadow Armor
 		shadowHelmet = new ItemShadowArmor(shadowArmorMaterial, 0, "shadowHelmet");
-		shadowChestPlate = new ItemShadowArmor(shadowArmorMaterial, 1, "shadowChest");
+		shadowChestPlate = new ItemShadowArmor(shadowArmorMaterial, 1, "shadowChestPlate");
 		shadowLegs = new ItemShadowArmor(shadowArmorMaterial, 2, "shadowLegs");
 		shadowBoots = new ItemShadowArmor(shadowArmorMaterial, 3, "shadowBoots");
 

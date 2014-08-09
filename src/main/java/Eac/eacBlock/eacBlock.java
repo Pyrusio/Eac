@@ -10,12 +10,14 @@ public class eacBlock extends Eac
 		oreAir = new BlockOreAir();
 		oreShadow = new BlockOreShadow();
 		airIngotBlock = new BlockIngotAir();
+		shadowIngotBlock = new BlockIngotShadow();
 		airDustBlock = new BlockDustAir();
 		aAirDustBlock = new BlockDustaAir();
 
 		RegisterHelper.registerBlock(oreAir);
 		RegisterHelper.registerBlock(oreShadow);
 		RegisterHelper.registerBlock(airIngotBlock);
+		RegisterHelper.registerBlock(shadowIngotBlock);
 		RegisterHelper.registerBlock(airDustBlock);
 		RegisterHelper.registerBlock(aAirDustBlock);
 	}

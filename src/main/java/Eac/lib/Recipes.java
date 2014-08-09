@@ -109,10 +109,81 @@ public class Recipes extends Eac
 			"III",
 			"III",
 			'I', ingotair });
+		GameRegistry.addRecipe(new ItemStack (shadowpick, 1), new Object[]{
+			"III",
+			" S ",
+			" S ",
+			'I', ingotshadow, 'S', Items.stick	});
+		GameRegistry.addRecipe(new ItemStack (shadowaxe, 1), new Object[]{
+			"II",
+			"IS",
+			" S",
+			'I', ingotshadow, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack (shadowaxe, 1), new Object[]{
+			"II",
+			"SI",
+			"S ",
+			'I', ingotshadow, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack (shadowsword, 1), new Object[]{
+			"I",
+			"I",
+			"S",
+			'I', ingotshadow, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack (shadowspade, 1), new Object[]{
+			"I",
+			"S",
+			"S",
+			'I', ingotshadow, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack (shadowhoe, 1), new Object[]{
+			"II",
+			"S ",
+			"S ",
+			'I', ingotshadow, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack (shadowhoe, 1), new Object[]{
+			"II",
+			" S",
+			" S",
+			'I', ingotshadow, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack (shadowHelmet, 1), new Object[]{
+			"III",
+			"I I",
+			"   ",
+			'I', ingotshadow });
+		GameRegistry.addRecipe(new ItemStack (shadowHelmet, 1), new Object[]{
+			"   ",
+			"III",
+			"I I",
+			'I', ingotshadow });
+		GameRegistry.addRecipe(new ItemStack (shadowChestPlate, 1), new Object[]{
+			"I I",
+			"III",
+			"III",
+			'I', ingotshadow });
+		GameRegistry.addRecipe(new ItemStack (shadowLegs, 1), new Object[]{
+			"III",
+			"I I",
+			"I I",
+			'I', ingotshadow });
+		GameRegistry.addRecipe(new ItemStack (shadowBoots, 1), new Object[]{
+			"I I",
+			"I I",
+			"   ",
+			'I', ingotshadow });
+		GameRegistry.addRecipe(new ItemStack (shadowBoots, 1), new Object[]{
+			"   ",
+			"I I",
+			"I I",
+			'I', ingotshadow });
+		GameRegistry.addRecipe(new ItemStack (shadowIngotBlock, 1), new Object[]{
+			"III",
+			"III",
+			"III",
+			'I', ingotshadow });
 		GameRegistry.addShapelessRecipe(new ItemStack(dustairact, 1), new Object[]{dustair, Items.feather});
 		GameRegistry.addShapelessRecipe(new ItemStack(dustair, 9), new Object[]{airDustBlock});
 		GameRegistry.addShapelessRecipe(new ItemStack(dustairact, 9), new Object[]{aAirDustBlock});
 		GameRegistry.addShapelessRecipe(new ItemStack(ingotair, 9), new Object[]{airIngotBlock});
 		GameRegistry.addSmelting(new ItemStack(dustairact), new ItemStack(ingotair), 1.0F);
+		GameRegistry.addSmelting(new ItemStack(oreShadow), new ItemStack(ingotshadow), 1.0F);
 	}
 }

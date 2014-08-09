@@ -62,6 +62,7 @@ public class Eac
 	public static Item shadowBoots;
 	// Block
 	public static Block airIngotBlock;
+	public static Block shadowIngotBlock;
 	public static Block airDustBlock;
 	public static Block aAirDustBlock;
 	// Ore

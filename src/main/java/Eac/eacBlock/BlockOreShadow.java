@@ -15,5 +15,6 @@ public class BlockOreShadow extends Block {
 		setResistance(5.0F);
 		setLightLevel(0.0F);
 		setHarvestLevel("pickaxe", 3);
+		setCreativeTab(Eac.tabs.Main.tabEac);
 	}
 }
