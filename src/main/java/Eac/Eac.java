@@ -22,9 +22,12 @@ public class Eac
 
 	protected static ToolMaterial aerial = EnumHelper.addToolMaterial("Aerial", 3, 1600, 12.0F, 8.5F, 30);
 	protected static ToolMaterial airToolMaterial = EnumHelper.addToolMaterial("AirTool", 3, 1600, 12.0F, 3.0F, 13);
+	protected static ToolMaterial shadowToolMaterial = EnumHelper.addToolMaterial("ShadowTool", 4, 1600, 12.0F, 4.0F, 13);
 	protected static ToolMaterial enderblood = EnumHelper.addToolMaterial("EnderBlood", 3, 20000, 13.0F, 14.5F, 30);
 	protected static ArmorMaterial airArmorMaterial = EnumHelper.addArmorMaterial("AirArmor", 45, new int[]
-	{ 3, 8, 6, 3 }, 30);
+			{ 3, 8, 6, 3 }, 30);
+	protected static ArmorMaterial shadowArmorMaterial = EnumHelper.addArmorMaterial("ShadowArmor", 45, new int[]
+			{ 4, 8, 7, 3 }, 30);
 
 	// Items
 	public static Item enderstar;
@@ -32,19 +35,31 @@ public class Eac
 	public static Item dustairact;
 	public static Item ingotair;
 	public static Item ingotshadow;
-	// tools
+	// Misc Tools
 	public static Item aersword;
 	public static Item bladedblood;
+	// Air Tools
 	public static Item airpick;
 	public static Item airaxe;
 	public static Item airsword;
 	public static Item airspade;
 	public static Item airhoe;
-	// Armor
+	// Shadow Tools
+	public static Item shadowpick;
+	public static Item shadowaxe;
+	public static Item shadowsword;
+	public static Item shadowspade;
+	public static Item shadowhoe;
+	// Air Armor
 	public static Item airHelmet;
-	public static Item airChest;
+	public static Item airChestPlate;
 	public static Item airLegs;
 	public static Item airBoots;
+	// Shadow Armor
+	public static Item shadowHelmet;
+	public static Item shadowChestPlate;
+	public static Item shadowLegs;
+	public static Item shadowBoots;
 	// Block
 	public static Block airIngotBlock;
 	public static Block airDustBlock;

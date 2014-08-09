@@ -69,7 +69,7 @@ public class Recipes extends Eac
 			"III",
 			"I I",
 			'I', ingotair });
-		GameRegistry.addRecipe(new ItemStack (airChest, 1), new Object[]{
+		GameRegistry.addRecipe(new ItemStack (airChestPlate, 1), new Object[]{
 			"I I",
 			"III",
 			"III",
