@@ -15,7 +15,7 @@ public class BlockOreAir extends Block
 	{
 		super(Material.rock);
 		setBlockName("oreAir");
-		setBlockTextureName(ModInfo.ID.toLowerCase() + ":" + getUnlocalizedName().substring(5));
+		setBlockTextureName(ModInfo.ID.toLowerCase() + ":" + "oreAir");
 		setStepSound(soundTypePiston);
 		setHardness(3.0F);
 		setResistance(5.0F);

@@ -50,6 +50,7 @@ public class Eac
 	public static Block aAirDustBlock;
 	// Ore
 	public static Block oreAir;
+	public static Block oreShadow;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
