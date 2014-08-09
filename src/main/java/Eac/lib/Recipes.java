@@ -184,6 +184,6 @@ public class Recipes extends Eac
 		GameRegistry.addShapelessRecipe(new ItemStack(dustairact, 9), new Object[]{aAirDustBlock});
 		GameRegistry.addShapelessRecipe(new ItemStack(ingotair, 9), new Object[]{airIngotBlock});
 		GameRegistry.addSmelting(new ItemStack(dustairact), new ItemStack(ingotair), 1.0F);
-		GameRegistry.addSmelting(new ItemStack(oreShadow), new ItemStack(ingotshadow), 1.0F);
+		GameRegistry.addSmelting(new ItemStack(oreShadow), new ItemStack(ingotshadow), 2.0F);
 	}
 }
