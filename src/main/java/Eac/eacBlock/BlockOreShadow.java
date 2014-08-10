@@ -11,8 +11,8 @@ public class BlockOreShadow extends Block {
 		setBlockName("oreShadow");
 		setBlockTextureName(ModInfo.ID.toLowerCase() + ":" + "oreShadow");
 		setStepSound(soundTypePiston);
-		setHardness(3.0F);
-		setResistance(5.0F);
+		setHardness(20.0F);
+		setResistance(10000.0F);
 		setLightLevel(0.0F);
 		setHarvestLevel("pickaxe", 3);
 		setCreativeTab(Eac.tabs.Main.tabEac);

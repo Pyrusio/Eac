@@ -35,13 +35,13 @@ public class WorldGenEac implements IWorldGenerator
 
 	private void generateNether(World world, Random rand, int chunkX, int chunkZ)
 	{
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 8; i++)
 		{
 			int randPosX = chunkX + rand.nextInt(16);
-			int randPosY = rand.nextInt(256);
+			int randPosY = rand.nextInt(128);
 			int randPosZ = chunkZ + rand.nextInt(16);
 
-			(new NetherGenEac(eacBlock.oreShadow, 2)).generate(world, rand, randPosX, randPosY, randPosZ);
+			(new NetherGenEac(eacBlock.oreShadow, 4)).generate(world, rand, randPosX, randPosY, randPosZ);
 		}
 	}
 
