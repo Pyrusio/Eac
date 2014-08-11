@@ -88,6 +88,7 @@ public class Eac
 		eacBlock.init();
 		Recipes.init();
 		oregen.mainRegistry();
+
 	}
 
 	@EventHandler
