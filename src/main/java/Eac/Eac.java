@@ -1,8 +1,9 @@
 package Eac;
 
-import Eac.config.ConfigHandler;
+import Eac.handler.ConfigHandler;
 import Eac.proxy.IProxy;
 import Eac.reference.Reference;
+import Eac.util.LogHelper;
 import cpw.mods.fml.common.SidedProxy;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -19,13 +20,13 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, useMetadata = true)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = "Eac.client.gui.GuiFactory")
 public class Eac
 {
     @Mod.Instance("Eac")
     public static Eac instance;
 
-    @SidedProxy(clientSide = "Eac.proxy.ClientProxy", serverSide = "Eac.proxy.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
 
 	protected static ToolMaterial aerial = EnumHelper.addToolMaterial("Aerial", 3, 1600, 12.0F, 8.5F, 30);
@@ -82,6 +83,7 @@ public class Eac
 	public void preInit(FMLPreInitializationEvent event)
 	{
         ConfigHandler.init(event.getSuggestedConfigurationFile());
+        LogHelper.info("Pre Initialization Complete!");
         eacItem.init();
 		eacBlock.init();
 		Recipes.init();
@@ -91,13 +93,13 @@ public class Eac
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-
+        LogHelper.info("Initialization Complete!");
 	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-
+        LogHelper.info("Post Initialization Complete!");
 	}
 
 }
