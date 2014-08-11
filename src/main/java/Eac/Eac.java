@@ -1,9 +1,11 @@
 package Eac;
 
+import Eac.reference.ic2Recipes;
 import Eac.handler.ConfigHandler;
 import Eac.proxy.IProxy;
 import Eac.reference.Reference;
 import Eac.util.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.SidedProxy;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -44,6 +46,9 @@ public class Eac
 	public static Item dustairact;
 	public static Item ingotair;
 	public static Item ingotshadow;
+    public static Item dustshadow;
+    public static Item cdustshadow;
+    public static Item pdustshadow;
 	// Misc Tools
 	public static Item aersword;
 	public static Item bladedblood;
@@ -83,24 +88,27 @@ public class Eac
 	public void preInit(FMLPreInitializationEvent event)
 	{
         ConfigHandler.init(event.getSuggestedConfigurationFile());
-        LogHelper.info("Pre Initialization Complete!");
+        FMLCommonHandler.instance().bus().register(new ConfigHandler());
         eacItem.init();
 		eacBlock.init();
 		Recipes.init();
 		oregen.mainRegistry();
+        LogHelper.info("Seeking What blocks to Steal from Steve");
 
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-        LogHelper.info("Initialization Complete!");
+        ic2Recipes.init();
+        LogHelper.info("*teleports through the dimensions*");
 	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-        LogHelper.info("Post Initialization Complete!");
+        LogHelper.info("Done Stealing Air and Shadow Blocks from Steve");
+        LogHelper.info("*Teleports back to the End*");
 	}
 
 }

@@ -20,4 +20,7 @@ public class Names
 	public static final String ShadowSword_unlocalizedName = "shadowSword";
 	public static final String ShadowSpade_unlocalizedName = "shadowSpade";
 	public static final String ShadowHoe_unlocalizedName = "shadowHoe";
+    public static final String ShadowDust_unlocalizedName = "shadowDust";
+    public static final String ShadowCDust_unlocalizedName = "shadowCrushedDust";
+    public static final String ShadowPDust_unlocalizedName = "shadowPureDust";
 }
