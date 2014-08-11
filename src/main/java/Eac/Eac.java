@@ -1,5 +1,6 @@
 package Eac;
 
+import Eac.config.ConfigHandler;
 import Eac.proxy.IProxy;
 import Eac.reference.Reference;
 import cpw.mods.fml.common.SidedProxy;
@@ -18,7 +19,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, useMetadata = true)
 public class Eac
 {
     @Mod.Instance("Eac")
@@ -80,7 +81,8 @@ public class Eac
     @EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		eacItem.init();
+        ConfigHandler.init(event.getSuggestedConfigurationFile());
+        eacItem.init();
 		eacBlock.init();
 		Recipes.init();
 		oregen.mainRegistry();
