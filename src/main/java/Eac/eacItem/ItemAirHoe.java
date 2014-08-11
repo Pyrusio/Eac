@@ -1,16 +1,15 @@
 package Eac.eacItem;
 
-import Eac.lib.ModInfo;
-import Eac.lib.Names;
+import Eac.reference.Reference;
+import Eac.reference.Names;
 import net.minecraft.item.ItemHoe;
-import net.minecraft.item.Item.ToolMaterial;
 
 public class ItemAirHoe extends ItemHoe
 {
 	protected ItemAirHoe(ToolMaterial material)
 	{
 		super(material);
-		setTextureName(ModInfo.ID.toLowerCase() + ":" + "airHoe");
+		setTextureName(Reference.MOD_ID.toLowerCase() + ":" + "airHoe");
 		setCreativeTab(Eac.tabs.Main.tabEac);
 		setUnlocalizedName(Names.AirHoe_unlocalizedName);
 	}

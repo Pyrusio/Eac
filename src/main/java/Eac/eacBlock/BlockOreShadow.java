@@ -1,6 +1,6 @@
 package Eac.eacBlock;
 
-import Eac.lib.ModInfo;
+import Eac.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -9,7 +9,7 @@ public class BlockOreShadow extends Block {
 	public BlockOreShadow() {
 		super(Material.rock);
 		setBlockName("oreShadow");
-		setBlockTextureName(ModInfo.ID.toLowerCase() + ":" + "oreShadow");
+		setBlockTextureName(Reference.MOD_ID.toLowerCase() + ":" + "oreShadow");
 		setStepSound(soundTypePiston);
 		setHardness(20.0F);
 		setResistance(10000.0F);

@@ -3,7 +3,7 @@ package Eac.eacBlock;
 import java.util.Random;
 
 import Eac.eacItem.eacItem;
-import Eac.lib.ModInfo;
+import Eac.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -15,7 +15,7 @@ public class BlockOreAir extends Block
 	{
 		super(Material.rock);
 		setBlockName("oreAir");
-		setBlockTextureName(ModInfo.ID.toLowerCase() + ":" + "oreAir");
+		setBlockTextureName(Reference.MOD_ID.toLowerCase() + ":" + "oreAir");
 		setStepSound(soundTypePiston);
 		setHardness(3.0F);
 		setResistance(5.0F);

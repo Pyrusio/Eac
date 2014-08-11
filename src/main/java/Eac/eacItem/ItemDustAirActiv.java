@@ -1,14 +1,14 @@
 package Eac.eacItem;
 
-import Eac.lib.ModInfo;
-import Eac.lib.Names;
+import Eac.reference.Reference;
+import Eac.reference.Names;
 import net.minecraft.item.Item;
 
 public class ItemDustAirActiv extends Item
 {
 	public ItemDustAirActiv()
 	{
-		setTextureName(ModInfo.ID.toLowerCase() + ":" + "dustAiract");
+		setTextureName(Reference.MOD_ID.toLowerCase() + ":" + "dustAiract");
 		setCreativeTab(Eac.tabs.Main.tabEac);
 		setUnlocalizedName(Names.actairdust_unlocalizedName);
 	}

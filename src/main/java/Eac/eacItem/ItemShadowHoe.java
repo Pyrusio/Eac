@@ -1,16 +1,15 @@
 package Eac.eacItem;
 
-import net.minecraft.item.Item.ToolMaterial;
+import Eac.reference.Reference;
 import net.minecraft.item.ItemHoe;
-import Eac.lib.ModInfo;
-import Eac.lib.Names;
+import Eac.reference.Names;
 
 public class ItemShadowHoe extends ItemHoe
 {
 	protected ItemShadowHoe(ToolMaterial material)
 	{
 		super(material);
-		setTextureName(ModInfo.ID.toLowerCase() + ":" + "shadowHoe");
+		setTextureName(Reference.MOD_ID.toLowerCase() + ":" + "shadowHoe");
 		setCreativeTab(Eac.tabs.Main.tabEac);
 		setUnlocalizedName(Names.ShadowHoe_unlocalizedName);
 	}

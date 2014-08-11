@@ -1,4 +1,4 @@
-package Eac.lib;
+package Eac.reference;
 
 public class Names
 {

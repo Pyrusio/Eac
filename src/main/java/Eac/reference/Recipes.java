@@ -1,4 +1,4 @@
-package Eac.lib;
+package Eac.reference;
 
 import Eac.Eac;
 import net.minecraft.init.Blocks;

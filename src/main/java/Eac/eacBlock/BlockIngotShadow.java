@@ -1,6 +1,6 @@
 package Eac.eacBlock;
 
-import Eac.lib.ModInfo;
+import Eac.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -10,7 +10,7 @@ public class BlockIngotShadow extends Block
 	{
 		super(Material.rock);
 		setBlockName("blockIshadow");
-		setBlockTextureName(ModInfo.ID.toLowerCase() + ":" + "blockIshadow");
+		setBlockTextureName(Reference.MOD_ID.toLowerCase() + ":" + "blockIshadow");
 		setStepSound(soundTypeMetal);
 		setHardness(5.0F);
 		setResistance(10.0F);

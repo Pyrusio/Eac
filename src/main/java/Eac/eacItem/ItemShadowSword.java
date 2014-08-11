@@ -1,15 +1,14 @@
 package Eac.eacItem;
 
-import net.minecraft.item.Item.ToolMaterial;
+import Eac.reference.Reference;
 import net.minecraft.item.ItemSword;
-import Eac.lib.ModInfo;
-import Eac.lib.Names;
+import Eac.reference.Names;
 
 public class ItemShadowSword extends ItemSword {
 	protected ItemShadowSword(ToolMaterial material)
 	{
 		super(material);
-		setTextureName(ModInfo.ID.toLowerCase() + ":" + "shadowSword");
+		setTextureName(Reference.MOD_ID.toLowerCase() + ":" + "shadowSword");
 		setCreativeTab(Eac.tabs.Main.tabEac);
 		setUnlocalizedName(Names.ShadowSword_unlocalizedName);
 	}

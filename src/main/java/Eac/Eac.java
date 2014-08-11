@@ -1,5 +1,8 @@
 package Eac;
 
+import Eac.proxy.IProxy;
+import Eac.reference.Reference;
+import cpw.mods.fml.common.SidedProxy;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -8,17 +11,21 @@ import net.minecraftforge.common.util.EnumHelper;
 import Eac.eacBlock.eacBlock;
 import Eac.eacBlock.oregen;
 import Eac.eacItem.eacItem;
-import Eac.lib.ModInfo;
-import Eac.lib.Recipes;
+import Eac.reference.Recipes;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class Eac
 {
+    @Mod.Instance("Eac")
+    public static Eac instance;
+
+    @SidedProxy(clientSide = "Eac.proxy.ClientProxy", serverSide = "Eac.proxy.ServerProxy")
+    public static IProxy proxy;
 
 	protected static ToolMaterial aerial = EnumHelper.addToolMaterial("Aerial", 3, 1600, 12.0F, 8.5F, 30);
 	protected static ToolMaterial airToolMaterial = EnumHelper.addToolMaterial("AirTool", 3, 1600, 12.0F, 3.0F, 13);
@@ -69,7 +76,8 @@ public class Eac
 	public static Block oreAir;
 	public static Block oreShadow;
 
-	@EventHandler
+
+    @EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		eacItem.init();

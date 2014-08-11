@@ -1,8 +1,8 @@
 package Eac.eacBlock;
 
+import Eac.reference.Reference;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
-import Eac.lib.ModInfo;
 
 public class BlockDustAir extends BlockFalling
 {
@@ -10,7 +10,7 @@ public class BlockDustAir extends BlockFalling
 	{
 		super(Material.sand);
 		setBlockName("blockDair");
-		setBlockTextureName(ModInfo.ID.toLowerCase() + ":" + "blockDair");
+		setBlockTextureName(Reference.MOD_ID.toLowerCase() + ":" + "blockDair");
 		setStepSound(soundTypeSand);
 		setHardness(5.0F);
 		setResistance(10.0F);

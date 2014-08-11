@@ -1,15 +1,14 @@
 package Eac.eacItem;
 
-import Eac.lib.ModInfo;
-import Eac.lib.Names;
-import net.minecraft.creativetab.CreativeTabs;
+import Eac.reference.Reference;
+import Eac.reference.Names;
 import net.minecraft.item.Item;
 
 public class ItemEnderStar extends Item
 {
 	public ItemEnderStar()
 	{
-		setTextureName(ModInfo.ID.toLowerCase() + ":" + "starEnder");
+		setTextureName(Reference.MOD_ID.toLowerCase() + ":" + "starEnder");
 		setCreativeTab(Eac.tabs.Main.tabEac);
 		setUnlocalizedName(Names.enderstar_unlocalizedName);
 	}

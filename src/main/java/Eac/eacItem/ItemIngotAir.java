@@ -1,7 +1,7 @@
 package Eac.eacItem;
 
-import Eac.lib.ModInfo;
-import Eac.lib.Names;
+import Eac.reference.Reference;
+import Eac.reference.Names;
 import net.minecraft.item.Item;
 
 public class ItemIngotAir extends Item
@@ -9,7 +9,7 @@ public class ItemIngotAir extends Item
 
 	public ItemIngotAir()
 	{
-		setTextureName(ModInfo.ID.toLowerCase() + ":" + "ingotAir");
+		setTextureName(Reference.MOD_ID.toLowerCase() + ":" + "ingotAir");
 		setCreativeTab(Eac.tabs.Main.tabEac);
 		setUnlocalizedName(Names.ingotAir_unlocalizedName);
 	}
