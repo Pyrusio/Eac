@@ -53,15 +53,15 @@ $RECYCLE.BIN/
 
 
 #eclipse
-.project
-.classpath
-.metadata
+*.project
+*.classpath
+*.metadata
 org.*
 
 #idea
-.iml
-.ipr
-.iws
+*.iml
+*.ipr
+*.iws
 
 #gradle
 build
