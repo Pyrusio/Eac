@@ -58,6 +58,11 @@ $RECYCLE.BIN/
 .metadata
 org.*
 
+#idea
+.iml
+.ipr
+.iws
+
 #gradle
 build
 .gradle
