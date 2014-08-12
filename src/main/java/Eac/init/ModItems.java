@@ -2,6 +2,7 @@ package Eac.init;
 
 import Eac.item.*;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.item.ItemStack;
 
 public class ModItems
 {
