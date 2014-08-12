@@ -1,10 +1,10 @@
 package Eac.reference;
 
-import Eac.eacItem.eacItem;
+import Eac.block.BlockEac;
+import Eac.init.ModItems;
+import Eac.item.ItemEacOld;
 import ic2.api.recipe.RecipeInputItemStack;
 import ic2.api.recipe.Recipes;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
@@ -16,9 +16,10 @@ public class ic2Recipes {
         NBTTagCompound oreThermData = new NBTTagCompound();
         oreThermData.setInteger("minHeat", 1500);
 
-        Recipes.macerator.addRecipe(new RecipeInputItemStack(new ItemStack(eacItem.oreShadow)), null, new ItemStack(eacItem.cdustshadow, 2));
-        Recipes.oreWashing.addRecipe(new RecipeInputItemStack(new ItemStack(eacItem.cdustshadow)), oreWashData, new ItemStack(eacItem.pdustshadow));
-        Recipes.centrifuge.addRecipe(new RecipeInputItemStack(new ItemStack(eacItem.pdustshadow)), oreThermData, new ItemStack(eacItem.dustshadow));
+        Recipes.macerator.addRecipe(new RecipeInputItemStack(new ItemStack(BlockEac.oreShadow)), null, new ItemStack(ModItems.cdustShadow, 2));
+        Recipes.macerator.addRecipe(new RecipeInputItemStack(new ItemStack(BlockEac.oreAir)), null, new ItemStack(ModItems.dustAir, 2));
+        Recipes.oreWashing.addRecipe(new RecipeInputItemStack(new ItemStack(ModItems.cdustShadow)), oreWashData, new ItemStack(ModItems.pdustShadow));
+        Recipes.centrifuge.addRecipe(new RecipeInputItemStack(new ItemStack(ModItems.pdustShadow)), oreThermData, new ItemStack(ModItems.dustShadow));
 
     }
 }

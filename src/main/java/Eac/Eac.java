@@ -1,5 +1,9 @@
 package Eac;
 
+import Eac.block.BlockEac;
+import Eac.init.ModItems;
+import Eac.item.ItemEacOld;
+import Eac.tools.ToolsEac;
 import Eac.reference.ic2Recipes;
 import Eac.handler.ConfigHandler;
 import Eac.proxy.IProxy;
@@ -12,9 +16,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
-import Eac.eacBlock.eacBlock;
-import Eac.eacBlock.oregen;
-import Eac.eacItem.eacItem;
+import Eac.block.oregen;
 import Eac.reference.Recipes;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -42,13 +44,14 @@ public class Eac
 
 	// Items
 	public static Item enderstar;
-	public static Item dustair;
+//	public static Item dustair;
 	public static Item dustairact;
 	public static Item ingotair;
-	public static Item ingotshadow;
-    public static Item dustshadow;
-    public static Item cdustshadow;
-    public static Item pdustshadow;
+//	  public static Item ingotshadow;
+//    public static Item dustshadow;
+//    public static Item cdustshadow;
+//    public static Item pdustshadow;
+
 	// Misc Tools
 	public static Item aersword;
 	public static Item bladedblood;
@@ -74,7 +77,7 @@ public class Eac
 	public static Item shadowChestPlate;
 	public static Item shadowLegs;
 	public static Item shadowBoots;
-	// Block
+    // Block
 	public static Block airIngotBlock;
 	public static Block shadowIngotBlock;
 	public static Block airDustBlock;
@@ -89,8 +92,10 @@ public class Eac
 	{
         ConfigHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
-        eacItem.init();
-		eacBlock.init();
+        ToolsEac.init();
+		BlockEac.init();
+        ModItems.init();
+        ItemEacOld.init();
 		Recipes.init();
 		oregen.mainRegistry();
         LogHelper.info("Seeking What blocks to Steal from Steve");

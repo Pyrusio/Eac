@@ -1,6 +1,8 @@
 package Eac.reference;
 
 import Eac.Eac;
+import Eac.init.ModItems;
+import cpw.mods.fml.common.Mod;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -93,7 +95,7 @@ public class Recipes extends Eac
 			"DDD",
 			"DDD",
 			"DDD",
-			'D', dustair });
+			'D', ModItems.dustAir });
 		GameRegistry.addRecipe(new ItemStack (aAirDustBlock, 1), new Object[]{
 			"DDD",
 			"DDD",
@@ -113,78 +115,78 @@ public class Recipes extends Eac
 			"III",
 			" S ",
 			" S ",
-			'I', ingotshadow, 'S', Items.stick	});
+			'I', ModItems.ingotShadow, 'S', Items.stick	});
 		GameRegistry.addRecipe(new ItemStack (shadowaxe, 1), new Object[]{
 			"II",
 			"IS",
 			" S",
-			'I', ingotshadow, 'S', Items.stick });
+			'I', ModItems.ingotShadow, 'S', Items.stick });
 		GameRegistry.addRecipe(new ItemStack (shadowaxe, 1), new Object[]{
 			"II",
 			"SI",
 			"S ",
-			'I', ingotshadow, 'S', Items.stick });
+			'I', ModItems.ingotShadow, 'S', Items.stick });
 		GameRegistry.addRecipe(new ItemStack (shadowsword, 1), new Object[]{
 			"I",
 			"I",
 			"S",
-			'I', ingotshadow, 'S', Items.stick });
+			'I', ModItems.ingotShadow, 'S', Items.stick });
 		GameRegistry.addRecipe(new ItemStack (shadowspade, 1), new Object[]{
 			"I",
 			"S",
 			"S",
-			'I', ingotshadow, 'S', Items.stick });
+			'I', ModItems.ingotShadow, 'S', Items.stick });
 		GameRegistry.addRecipe(new ItemStack (shadowhoe, 1), new Object[]{
 			"II",
 			"S ",
 			"S ",
-			'I', ingotshadow, 'S', Items.stick });
+			'I', ModItems.ingotShadow, 'S', Items.stick });
 		GameRegistry.addRecipe(new ItemStack (shadowhoe, 1), new Object[]{
 			"II",
 			" S",
 			" S",
-			'I', ingotshadow, 'S', Items.stick });
+			'I', ModItems.ingotShadow, 'S', Items.stick });
 		GameRegistry.addRecipe(new ItemStack (shadowHelmet, 1), new Object[]{
 			"III",
 			"I I",
 			"   ",
-			'I', ingotshadow });
+			'I', ModItems.ingotShadow });
 		GameRegistry.addRecipe(new ItemStack (shadowHelmet, 1), new Object[]{
 			"   ",
 			"III",
 			"I I",
-			'I', ingotshadow });
+			'I', ModItems.ingotShadow });
 		GameRegistry.addRecipe(new ItemStack (shadowChestPlate, 1), new Object[]{
 			"I I",
 			"III",
 			"III",
-			'I', ingotshadow });
+			'I', ModItems.ingotShadow });
 		GameRegistry.addRecipe(new ItemStack (shadowLegs, 1), new Object[]{
 			"III",
 			"I I",
 			"I I",
-			'I', ingotshadow });
+			'I', ModItems.ingotShadow });
 		GameRegistry.addRecipe(new ItemStack (shadowBoots, 1), new Object[]{
 			"I I",
 			"I I",
 			"   ",
-			'I', ingotshadow });
+			'I', ModItems.ingotShadow });
 		GameRegistry.addRecipe(new ItemStack (shadowBoots, 1), new Object[]{
 			"   ",
 			"I I",
 			"I I",
-			'I', ingotshadow });
+			'I', ModItems.ingotShadow });
 		GameRegistry.addRecipe(new ItemStack (shadowIngotBlock, 1), new Object[]{
 			"III",
 			"III",
 			"III",
-			'I', ingotshadow });
-		GameRegistry.addShapelessRecipe(new ItemStack(dustairact, 1), new Object[]{dustair, Items.feather});
-		GameRegistry.addShapelessRecipe(new ItemStack(dustair, 9), new Object[]{airDustBlock});
+			'I', ModItems.ingotShadow });
+		GameRegistry.addShapelessRecipe(new ItemStack(dustairact, 1), new Object[]{ModItems.dustAir, Items.feather});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustAir, 9), new Object[]{airDustBlock});
 		GameRegistry.addShapelessRecipe(new ItemStack(dustairact, 9), new Object[]{aAirDustBlock});
-        GameRegistry.addShapelessRecipe(new ItemStack(ingotshadow, 9), new Object[]{shadowIngotBlock});
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.ingotShadow, 9), new Object[]{shadowIngotBlock});
 		GameRegistry.addShapelessRecipe(new ItemStack(ingotair, 9), new Object[]{airIngotBlock});
 		GameRegistry.addSmelting(new ItemStack(dustairact), new ItemStack(ingotair), 1.0F);
-		GameRegistry.addSmelting(new ItemStack(dustshadow), new ItemStack(ingotshadow), 2.0F);
+		GameRegistry.addSmelting(new ItemStack(ModItems.dustShadow), new ItemStack(ModItems.ingotShadow), 2.0F);
 	}
 }
