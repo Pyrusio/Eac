@@ -4,7 +4,7 @@
 .mtj.tmp/
 
 # Package Files #
-#*.jar
+*.jar
 *.war
 *.ear
 
@@ -67,4 +67,6 @@ org.*
 build
 .gradle
 *.bat
+
+*.pub
 
