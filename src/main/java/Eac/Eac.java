@@ -2,7 +2,7 @@ package Eac;
 
 import Eac.block.BlockEac;
 import Eac.init.ModItems;
-import Eac.item.ItemEacOld;
+import Eac.init.achievements;
 import Eac.tools.ToolsEac;
 import Eac.reference.ic2Recipes;
 import Eac.handler.ConfigHandler;
@@ -15,6 +15,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.util.EnumHelper;
 import Eac.block.oregen;
 import Eac.reference.Recipes;
@@ -41,16 +42,6 @@ public class Eac
 			{ 3, 8, 6, 3 }, 30);
 	protected static ArmorMaterial shadowArmorMaterial = EnumHelper.addArmorMaterial("ShadowArmor", 55, new int[]
 			{ 5, 8, 7, 4 }, 35);
-
-	// Items
-	public static Item enderstar;
-//	public static Item dustair;
-	public static Item dustairact;
-	public static Item ingotair;
-//	  public static Item ingotshadow;
-//    public static Item dustshadow;
-//    public static Item cdustshadow;
-//    public static Item pdustshadow;
 
 	// Misc Tools
 	public static Item aersword;
@@ -85,7 +76,9 @@ public class Eac
 	// Ore
 	public static Block oreAir;
 	public static Block oreShadow;
-
+    // Achievements
+    public static Achievement airoremined;
+    public static Achievement shadoworemined;
 
     @EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -95,7 +88,6 @@ public class Eac
         ToolsEac.init();
 		BlockEac.init();
         ModItems.init();
-        ItemEacOld.init();
 		Recipes.init();
 		oregen.mainRegistry();
         LogHelper.info("Seeking What blocks to Steal from Steve");
@@ -106,6 +98,7 @@ public class Eac
 	public void init(FMLInitializationEvent event)
 	{
         ic2Recipes.init();
+        achievements.init();
         LogHelper.info("*teleports through the dimensions*");
 	}
 
