@@ -2,7 +2,6 @@ package Eac.reference;
 
 import Eac.block.BlockEac;
 import Eac.init.ModItems;
-import Eac.item.ItemEacOld;
 import ic2.api.recipe.RecipeInputItemStack;
 import ic2.api.recipe.Recipes;
 import net.minecraft.item.ItemStack;
