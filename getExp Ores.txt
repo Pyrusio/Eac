@@ -1,0 +1,8 @@
+    private Random rand = new Random();
+    @Override
+    public int getExpDrop(IBlockAccess p_149690_1_, int p_149690_5_, int p_149690_7_){
+        if(this.getItemDropped(p_149690_5_, rand, p_149690_7_) != Item.getItemFromBlock(this)){
+            return 1 + rand.nextInt(5);
+        }
+        return 0;
+    }

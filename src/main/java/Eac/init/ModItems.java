@@ -2,15 +2,17 @@ package Eac.init;
 
 import Eac.item.*;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.ItemStack;
 
 public class ModItems
 {
     public static final ItemEac dustShadow = new ItemDustShadow();
     public static final ItemEac dustAir = new ItemDustAir();
+    public static final ItemEac dustAirAct = new ItemDustAirActiv();
     public static final ItemEac cdustShadow = new ItemCDustShadow();
     public static final ItemEac pdustShadow = new ItemPDustShadow();
     public static final ItemEac ingotShadow = new ItemIngotShadow();
+    public static final ItemEac enderstar = new ItemEnderStar();
+    public static final ItemEac ingotair = new ItemIngotAir();
 
     public static void init()
     {
@@ -19,5 +21,8 @@ public class ModItems
         GameRegistry.registerItem(pdustShadow, "Shadow_Dust_Purified");
         GameRegistry.registerItem(ingotShadow, "Shadow_Ingot");
         GameRegistry.registerItem(dustAir, "Air_Dust");
+        GameRegistry.registerItem(dustAirAct, "Active_Air_Dust");
+        GameRegistry.registerItem(enderstar, "Enderstar");
+        GameRegistry.registerItem(ingotair, "Air_Ingot");
     }
 }

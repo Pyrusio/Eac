@@ -3,10 +3,16 @@ package Eac.block;
 import Eac.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
+import net.minecraft.world.IBlockAccess;
 
-public class BlockOreShadow extends Block {
+import java.util.Random;
 
-	public BlockOreShadow() {
+public class BlockOreShadow extends Block
+{
+
+	public BlockOreShadow()
+    {
 		super(Material.rock);
 		setBlockName("oreShadow");
 		setBlockTextureName(Reference.MOD_ID.toLowerCase() + ":" + "oreShadow");
