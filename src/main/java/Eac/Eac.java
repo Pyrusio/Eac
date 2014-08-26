@@ -1,6 +1,7 @@
 package Eac;
 
 import Eac.block.BlockEac;
+import Eac.entity.EacEntity;
 import Eac.init.ModItems;
 import Eac.init.achievements;
 import Eac.tools.ToolsEac;
@@ -30,6 +31,9 @@ public class Eac
 {
     @Mod.Instance("Eac")
     public static Eac instance;
+
+    @Mod.Instance(Reference.MOD_ID)
+    public static Eac mobInstance;
 
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
@@ -89,7 +93,8 @@ public class Eac
 		BlockEac.init();
         ModItems.init();
 		Recipes.init();
-		oregen.mainRegistry();
+		oregen.init();
+        EacEntity.init();
         LogHelper.info("Seeking What blocks to Steal from Steve");
 
 	}

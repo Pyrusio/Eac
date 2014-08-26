@@ -22,8 +22,8 @@ group= "nl.the-eac.abchrisabc" // http://maven.apache.org/guides/mini/guide-nami
 archivesBaseName = "Eac"
 
 minecraft {
-    version = "1.7.10-10.13.0.1205"
-    runDir = "idea/assets"
+    version = "1.7.10-10.13.0.1208"
+//    runDir = "idea/assets"
 }
 
 dependencies {

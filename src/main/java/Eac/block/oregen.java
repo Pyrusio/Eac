@@ -6,7 +6,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class oregen
 {
 
-	public static void mainRegistry()
+	public static void init()
 	{
 		initWorldGen();
 	}
