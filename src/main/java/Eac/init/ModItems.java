@@ -15,6 +15,7 @@ public class ModItems
     public static final ItemEac ingotShadow = new ItemIngotShadow();
     public static final ItemEac enderstar = new ItemEnderStar();
     public static final ItemEac ingotair = new ItemIngotAir();
+    public static final ItemEac enderperlite = new ItemEnderPerlite();
 
     public static void init()
     {
@@ -26,5 +27,6 @@ public class ModItems
         GameRegistry.registerItem(dustAirAct, "Active_Air_Dust");
         GameRegistry.registerItem(enderstar, "Enderstar");
         GameRegistry.registerItem(ingotair, "Air_Ingot");
+        GameRegistry.registerItem(enderperlite, "Ender_Perlite");
     }
 }

@@ -1,5 +1,6 @@
 package Eac.entity;
 
+import Eac.init.ModItems;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -18,7 +19,23 @@ public class EntityEnderGuard extends EntityEnderman {
     @Override
     protected Item getDropItem()
     {
-        return Item.getItemFromBlock(Blocks.end_stone);
+        return ModItems.enderperlite;
+    }
+
+    @Override
+    protected void dropFewItems(boolean p_70628_1_, int p_70628_2_)
+    {
+        Item item = this.getDropItem();
+
+        if (item != null)
+        {
+            int j = this.rand.nextInt(2 + p_70628_2_);
+
+            for (int k = 0; k < j; ++k)
+            {
+                this.dropItem(item, 1);
+            }
+        }
     }
 
     @Override
