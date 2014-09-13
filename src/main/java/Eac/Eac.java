@@ -77,6 +77,7 @@ public class Eac
 	public static Block shadowIngotBlock;
 	public static Block airDustBlock;
 	public static Block aAirDustBlock;
+    public static Block benderperlite;
 	// Ore
 	public static Block oreAir;
 	public static Block oreShadow;

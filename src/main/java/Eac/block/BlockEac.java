@@ -13,6 +13,7 @@ public class BlockEac extends Eac
 		shadowIngotBlock = new BlockIngotShadow();
 		airDustBlock = new BlockDustAir();
 		aAirDustBlock = new BlockDustaAir();
+        benderperlite = new BlockEnderPerlite();
 
 		RegisterHelper.registerBlock(oreAir);
 		RegisterHelper.registerBlock(oreShadow);
@@ -20,6 +21,7 @@ public class BlockEac extends Eac
 		RegisterHelper.registerBlock(shadowIngotBlock);
 		RegisterHelper.registerBlock(airDustBlock);
 		RegisterHelper.registerBlock(aAirDustBlock);
+        RegisterHelper.registerBlock(benderperlite);
 	}
 
 }
