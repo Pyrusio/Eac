@@ -1,3 +1,4 @@
+//Spullen
 itemGroup.tabEac=Eac Spullen
 item.enderstar.name=Ender Ster
 item.bladedblood.name=Bloedmes
@@ -27,9 +28,17 @@ item.shadowHelmet.name=Schaduw Helm
 item.shadowChestPlate.name=Schaduw Borstplaat
 item.shadowLegs.name=Schaduw Beenstukken
 item.shadowBoots.name=Schaduw Laarzen
+//Blokken
 tile.blockIshadow.name=Blok van de 9 Schaduwstaven
 tile.blockIair.name=Blok van de 9 Luchtstaven
 tile.blockDair.name=Luchtpoeder Blok
 tile.blockaDair.name=Geactiveerd Luchtpoeder Blok
 tile.oreAir.name=Luchterts
 tile.oreShadow.name=Schaduwerts
+//Prestaties
+achievement.airoremined=Luchterts gedolven
+achievement.airoremined.desc=Vaarwel Diamanten!!!
+achievement.shadoworemined=Schaduwerts gedolven
+achievement.shadoworemined.desc=Verrast dat je houweel niet brak
+//Entities
+entity.EnderGuardian.name=Ender Beschermer
