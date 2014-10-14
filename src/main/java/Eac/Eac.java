@@ -4,6 +4,7 @@ import Eac.block.BlockEac;
 import Eac.entity.EacEntity;
 import Eac.init.ModItems;
 import Eac.init.achievements;
+import Eac.proxy.ClientProxy;
 import Eac.tools.ToolsEac;
 import Eac.reference.ic2Recipes;
 import Eac.handler.ConfigHandler;
@@ -94,6 +95,7 @@ public class Eac
 		BlockEac.init();
         ModItems.init();
 		Recipes.init();
+        proxy.registerRenderThings();
 		oregen.init();
         EacEntity.init();
         LogHelper.info("Seeking What blocks to Steal from Steve");

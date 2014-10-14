@@ -1,5 +1,6 @@
 itemGroup.tabEac=Eac Items
-item.enderstar.name=Ender Star
+// Items
+item.eac:enderstar.name=Ender Star
 item.bladedblood.name=Dead Blood Blade
 item.aerSword.name=Aerial Sword
 item.airPick.name=Air Pickaxe
@@ -8,8 +9,8 @@ item.airSword.name=Air Sword
 item.airSpade.name=Air Shovel
 item.airHoe.name=Air Hoe
 item.eac:dustAir.name=Air Dust
-item.dustAirAct.name=Active Air Dust
-item.ingotAir.name=Air Ingot
+item.eac:dustAirAct.name=Active Air Dust
+item.eac:ingotAir.name=Air Ingot
 item.airHelmet.name=Air Helmet
 item.airChestPlate.name=Air Chestplate
 item.airLegs.name=Air Leggings
@@ -27,9 +28,17 @@ item.shadowHelmet.name=Shadow Helmet
 item.shadowChestPlate.name=Shadow Chestplate
 item.shadowLegs.name=Shadow Leggings
 item.shadowBoots.name=Shadow Boots
+// Blocks
 tile.blockIshadow.name=Block of the 9 Shadow Ingots
 tile.blockIair.name=Block of the 9 Air Ingots
 tile.blockDair.name=Block of Air Dust
 tile.blockaDair.name=Block of Active Air Dust
 tile.oreAir.name=Air Ore
 tile.oreShadow.name=Shadow Ore
+// Achievements
+achievement.airoremined=Air Ore Mined
+achievement.airoremined.desc=Goodbye Diamonds!!!
+achievement.shadoworemined=Shadow Ore Mined
+achievement.shadoworemined.desc=Surprised that your pick didn't break
+// Entity
+entity.EnderGuardian.name=Ender Guardian
