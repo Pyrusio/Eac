@@ -113,7 +113,7 @@ public class Eac
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-        LogHelper.info("Done Stealing Air and Shadow Blocks from Steve");
+        LogHelper.info("Done Stealing Air and Shadow Blocks from Steve, Throwing away useless diamonds");
         LogHelper.info("*Teleports back to the End*");
 	}
 

@@ -101,10 +101,10 @@ public class Recipes extends Eac
 			"DDD",
 			'D', ModItems.dustAirAct });
 		GameRegistry.addRecipe(new ItemStack (aAirDustBlock, 1), new Object[]{
-			"DDD",
-			"DFD",
-			"DDD",
-			'F', airDustBlock, 'D', Items.feather });
+			"FFF",
+			"FDF",
+			"FFF",
+			'D', airDustBlock, 'F', Items.feather });
 		GameRegistry.addRecipe(new ItemStack (airIngotBlock, 1), new Object[]{
 			"III",
 			"III",
