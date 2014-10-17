@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.10-v1.3.6-a0.1b"
+version = "1.7.10-v1.3.6-a0.1c"
 group= "nl.the-eac.abchrisabc" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Eac"
 
@@ -39,7 +39,7 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
+	
 }
 
 processResources

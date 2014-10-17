@@ -6,8 +6,6 @@ import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
 
-import javax.swing.text.html.parser.Entity;
-
 public class EacEntity {
     public static void init() {
         registerEntity();
@@ -22,7 +20,7 @@ public class EacEntity {
 
         EntityRegistry.registerGlobalEntityID(entityClass, entityName, randomId);
         EntityRegistry.registerModEntity(entityClass, entityName, randomId, Eac.mobInstance, 64, 1, true);
-        EntityRegistry.addSpawn(entityClass, 2, 0, 7, EnumCreatureType.monster, BiomeGenBase.sky);
+        EntityRegistry.addSpawn(entityClass, 2, 0, 7, EnumCreatureType.monster, BiomeGenBase.extremeHills.jungle.forest.desert.sky.plains);
         createEgg(randomId, solidColor, spotColor);
     }
 

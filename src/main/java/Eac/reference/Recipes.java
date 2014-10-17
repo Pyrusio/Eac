@@ -180,6 +180,10 @@ public class Recipes extends Eac
 			"III",
 			"III",
 			'I', ModItems.ingotShadow });
+        GameRegistry.addRecipe(new ItemStack (benderperlite, 2), new Object[]{
+            "xx",
+            "xx",
+            'x', ModItems.enderperlite });
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustAirAct, 1), new Object[]{ModItems.dustAir, Items.feather});
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustAir, 9), new Object[]{airDustBlock});
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustAirAct, 9), new Object[]{aAirDustBlock});
