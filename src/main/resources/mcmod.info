@@ -1,11 +1,9 @@
 [
 {
-  "modListVersion": 2,
-  "modList": [{
     "modid": "eac",
     "name": "Enders Aerial Cast",
     "description": "This is a mod that adds new things to minecraft -Obviously-",
-    "version": "v1.3.6-a0.1",
+    "version": "1.7.10-v1.3.6-a0.1c",
     "mcversion": "1.7.10",
     "url": "http://www.the-eac.nl/eac-minecraft-mod",
     "updateUrl": "",
@@ -18,6 +16,5 @@
     "dependencies": [ "FML" ],
     "dependants": [],
     "useDependencyInformation": false
-  }]
 }
 ]

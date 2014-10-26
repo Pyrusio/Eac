@@ -1,20 +1,23 @@
 package Eac.block;
 
 import Eac.reference.Reference;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockEnderPerlite extends Block
-{
-    public BlockEnderPerlite()
-    {
+public class BlockEnderPerlite extends Block {
+
+    private String privateName = "enderperlite";
+
+    public BlockEnderPerlite() {
         super(Material.rock);
-        setBlockName("enderperlite");
-        setBlockTextureName(Reference.MOD_ID.toLowerCase() + ":" + "enderperliteblock");
+        setBlockName(privateName);
+        setBlockTextureName(Reference.MOD_ID.toLowerCase() + ":" + privateName);
         setStepSound(soundTypePiston);
         setHardness(3.0F);
         setResistance(5.0F);
         setHarvestLevel("pickaxe", 2);
         setCreativeTab(Eac.tabs.Main.tabEac);
+        GameRegistry.registerBlock(this, privateName);
     }
 }

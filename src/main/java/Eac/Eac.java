@@ -4,7 +4,6 @@ import Eac.block.BlockEac;
 import Eac.entity.EacEntity;
 import Eac.init.ModItems;
 import Eac.init.achievements;
-import Eac.proxy.ClientProxy;
 import Eac.tools.ToolsEac;
 import Eac.reference.ic2Recipes;
 import Eac.handler.ConfigHandler;
@@ -13,6 +12,7 @@ import Eac.reference.Reference;
 import Eac.util.LogHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -79,6 +79,9 @@ public class Eac
 	public static Block airDustBlock;
 	public static Block aAirDustBlock;
     public static Block benderperlite;
+    public static Block featherblock;
+    public static Block activationcatalyst;
+    public static Block softfaller;
 	// Ore
 	public static Block oreAir;
 	public static Block oreShadow;
@@ -107,6 +110,7 @@ public class Eac
 	{
         ic2Recipes.init();
         achievements.init();
+        proxy.registerTileEntities();
         LogHelper.info("*teleports through the dimensions*");
 	}
 
