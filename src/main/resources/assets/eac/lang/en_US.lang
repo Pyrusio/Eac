@@ -42,3 +42,10 @@ achievement.shadoworemined=Shadow Ore Mined
 achievement.shadoworemined.desc=Surprised that your pick didn't break
 // Entity
 entity.EnderGuardian.name=Ender Guardian
+// Random
+item.diamond.name=Useless Diamond
+item.diamond.desc=Why did you go for it anyway? -Eac
+tile.oreDiamond.name=Useless Ore
+tile.oreDiamond.desc= Really? Using this Useless material for decoration!? -Eac
+tile.blockDiamond.name=Block of Wasted Time
+tile.blockdiamond.desc=As the name implies. I'm not going to waste time explaining it to you. -Eac
