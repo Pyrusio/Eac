@@ -17,6 +17,7 @@ public class BlockActivationCatalyst extends Block implements ITileEntityProvide
     public BlockActivationCatalyst() {
         super(Material.rock);
         setBlockName(privateName);
+        setBlockTextureName(Reference.MOD_ID.toLowerCase() + ":" + privateName);
         setHardness(5.0F);
         setResistance(5.0F);
         setHarvestLevel("pickaxe", 2);
