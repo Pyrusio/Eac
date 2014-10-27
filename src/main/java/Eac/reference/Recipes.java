@@ -184,6 +184,16 @@ public class Recipes extends Eac
             "xx",
             "xx",
             'x', ModItems.enderperlite });
+        GameRegistry.addRecipe(new ItemStack(activationcatalyst, 1), new Object[]{
+            "DXF",
+            " B ",
+            "III",
+            'D', ModItems.dustAir, 'X', featherblock, 'F', Items.feather, 'B', Blocks.iron_block, 'I', Items.iron_ingot });
+        GameRegistry.addRecipe(new ItemStack(activationcatalyst, 1), new Object[]{
+            "FXD",
+            " B ",
+            "III",
+            'D', ModItems.dustAir, 'X', featherblock, 'F', Items.feather, 'B', Blocks.iron_block, 'I', Items.iron_ingot });
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustAirAct, 1), new Object[]{ModItems.dustAir, Items.feather});
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustAir, 9), new Object[]{airDustBlock});
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustAirAct, 9), new Object[]{aAirDustBlock});

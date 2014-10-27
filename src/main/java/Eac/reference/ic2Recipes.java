@@ -11,9 +11,9 @@ public class ic2Recipes {
     public static void init()
     {
         NBTTagCompound oreWashData = new NBTTagCompound();
-        oreWashData.setInteger("amount", 1000);
+        oreWashData.setInteger("amount", 2000);
         NBTTagCompound oreThermData = new NBTTagCompound();
-        oreThermData.setInteger("minHeat", 1500);
+        oreThermData.setInteger("minHeat", 3500);
 
         Recipes.macerator.addRecipe(new RecipeInputItemStack(new ItemStack(BlockEac.oreShadow)), null, new ItemStack(ModItems.cdustShadow, 2));
         Recipes.macerator.addRecipe(new RecipeInputItemStack(new ItemStack(BlockEac.oreAir)), null, new ItemStack(ModItems.dustAir, 2));
