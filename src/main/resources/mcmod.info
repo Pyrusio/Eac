@@ -8,11 +8,11 @@
     "url": "http://www.the-eac.nl/eac-minecraft-mod",
     "updateUrl": "",
     "authorList": [ "Abchrisabc", "JasperFirecai2" ],
-    "credits": "Thanks JasperFirecai2 for making the textures",
+    "credits": " Abchrisabc: I want to thank JasperFirecai2 for making all the Textures, Jasperfirecai2: I would like to thank Abchrisabc for making the mod and allowing me to co-operate with him",
     "logoFile": "/Eac.png",
     "screenshots": [],
     "parent": "",
-    "requiredMods": [ "Forge", "ic2" ],
+    "requiredMods": [ "Forge" ],
     "dependencies": [ "FML" ],
     "dependants": [],
     "useDependencyInformation": false
