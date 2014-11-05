@@ -12,7 +12,7 @@
     "logoFile": "/Eac.png",
     "screenshots": [],
     "parent": "",
-    "requiredMods": [ "Forge", "Industrialcraft2-experimental" ],
+    "requiredMods": [ "Forge", "IC2" ],
     "dependencies": [ "FML" ],
     "dependants": [],
     "useDependencyInformation": false
