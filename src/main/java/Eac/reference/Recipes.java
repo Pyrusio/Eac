@@ -237,7 +237,7 @@ public class Recipes extends Eac {
                 "YYY",
                 "ZXZ",
                 "ABA",
-                'X', new ItemStack(softfaller, 1, 6), 'Y', ModItems.ingotShadow, 'Z', Blocks.wool, 'A', Items.feather, 'B', Items.cooked_chicken});
+                'X', new ItemStack(softfaller, 1, 6), 'Y', ModItems.ingotShadow, 'Z', ModItems.enderperlite, 'A', Items.feather, 'B', Items.cooked_chicken});
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustAirAct, 1), new Object[]{ModItems.dustAir, Items.feather});
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustAir, 9), new Object[]{airDustBlock});
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustAirAct, 9), new Object[]{aAirDustBlock});
