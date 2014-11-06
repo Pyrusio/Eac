@@ -28,7 +28,7 @@ item.shadowHelmet.name=Schaduw Helm
 item.shadowChestPlate.name=Schaduw Borstplaat
 item.shadowLegs.name=Schaduw Beenstukken
 item.shadowBoots.name=Schaduw Laarzen
-item.eac:enderperlite.name= Enderperliet
+item.eac:enderperlite.name=Enderperliet
 //Blokken
 tile.blockIshadow.name=Blok van de 9 Schaduwstaven
 tile.blockIair.name=Blok van de 9 Luchtstaven
@@ -39,7 +39,16 @@ tile.oreShadow.name=Schaduwerts
 tile.featherblock.name=VerenBlok
 tile.enderperlite.name=Enderperliet Blok
 //TegelEntiteiten
-tile.activation_catalyst.name= Activatie Catalyst
+tile.activation_catalyst.name=Activatie Catalyst
+//META blokken
+tile.softfaller.t1.name=1ste Rang Valverzachter
+tile.softfaller.t2.name=2de Rang Valverzachter
+tile.softfaller.t3.name=3de Rang Valverzachter
+tile.softfaller.t4.name=4e Rang Valverzachter
+tile.softfaller.t5.name=5e Rang Valverzachter
+tile.softfaller.t6.name=6e Rang Valverzachter
+tile.softfaller.t7.name=7e Rang Valverzachter
+tile.softfaller.t8.name=8e Rang Valverzachter
 //Prestaties
 achievement.airoremined=Luchterts gedolven
 achievement.airoremined.desc=Vaarwel Diamanten!!!
