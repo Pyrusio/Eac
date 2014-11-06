@@ -1,6 +1,6 @@
-//Spullen
 itemGroup.tabEac=Eac Spullen
-item.enderstar.name=Ender Ster
+//Spullen
+item.eac:enderstar.name=Ender Ster
 item.bladedblood.name=Bloedmes
 item.aerSword.name=Luchtelijk Zwaard
 item.airPick.name=Lucht Houweel
@@ -9,8 +9,8 @@ item.airSword.name=Lucht Zwaard
 item.airSpade.name=Lucht Schep
 item.airHoe.name=Lucht Schoffel
 item.eac:dustAir.name=Lucht poeder
-item.dustAirAct.name=Geactiveerd Lucht poeder
-item.ingotAir.name=Luchtstaaf
+item.eac:dustAiract.name=Geactiveerd Lucht poeder
+item.eac:ingotAir.name=Luchtstaaf
 item.airHelmet.name=Lucht Helm
 item.airChestPlate.name=Lucht Borstplaat
 item.airLegs.name=Lucht Beenstukken
@@ -28,6 +28,7 @@ item.shadowHelmet.name=Schaduw Helm
 item.shadowChestPlate.name=Schaduw Borstplaat
 item.shadowLegs.name=Schaduw Beenstukken
 item.shadowBoots.name=Schaduw Laarzen
+item.eac:enderperlite.name= Enderperliet
 //Blokken
 tile.blockIshadow.name=Blok van de 9 Schaduwstaven
 tile.blockIair.name=Blok van de 9 Luchtstaven
@@ -35,6 +36,10 @@ tile.blockDair.name=Luchtpoeder Blok
 tile.blockaDair.name=Geactiveerd Luchtpoeder Blok
 tile.oreAir.name=Luchterts
 tile.oreShadow.name=Schaduwerts
+tile.featherblock.name=VerenBlok
+tile.enderperlite.name=Enderperliet Blok
+//TegelEntiteiten
+tile.activation_catalyst.name= Activatie Catalyst
 //Prestaties
 achievement.airoremined=Luchterts gedolven
 achievement.airoremined.desc=Vaarwel Diamanten!!!
@@ -42,3 +47,7 @@ achievement.shadoworemined=Schaduwerts gedolven
 achievement.shadoworemined.desc=Verrast dat je houweel niet brak
 //Entities
 entity.EnderGuardian.name=Ender Beschermer
+// Willekeurig
+item.diamond.name=Waardeloze Diamant
+tile.oreDiamond.name=Waardeloos Erts
+tile.blockDiamond.name=Blok van Verspilde Tijd
