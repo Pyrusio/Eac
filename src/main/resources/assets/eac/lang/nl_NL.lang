@@ -41,14 +41,14 @@ tile.enderperlite.name=Enderperliet Blok
 //TegelEntiteiten
 tile.activation_catalyst.name=Activatie Catalyst
 //META blokken
-tile.softfaller.t1.name=1ste Rang Valverzachter
-tile.softfaller.t2.name=2de Rang Valverzachter
-tile.softfaller.t3.name=3de Rang Valverzachter
-tile.softfaller.t4.name=4e Rang Valverzachter
-tile.softfaller.t5.name=5e Rang Valverzachter
-tile.softfaller.t6.name=6e Rang Valverzachter
-tile.softfaller.t7.name=7e Rang Valverzachter
-tile.softfaller.t8.name=8e Rang Valverzachter
+tile.softFaller.t1.name=1ste Rang Valverzachter
+tile.softFaller.t2.name=2de Rang Valverzachter
+tile.softFaller.t3.name=3de Rang Valverzachter
+tile.softFaller.t4.name=4e Rang Valverzachter
+tile.softFaller.t5.name=5e Rang Valverzachter
+tile.softFaller.t6.name=6e Rang Valverzachter
+tile.softFaller.t7.name=7e Rang Valverzachter
+tile.softFaller.t8.name=8e Rang Valverzachter
 //Prestaties
 achievement.airoremined=Luchterts gedolven
 achievement.airoremined.desc=Vaarwel Diamanten!!!
