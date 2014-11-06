@@ -2,13 +2,16 @@ package Eac.block;
 
 import Eac.block.tileentity.TileEntityActivationCatalyst;
 import Eac.reference.Reference;
+import Eac.util.LogHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
 
 public class BlockActivationCatalyst extends Block implements ITileEntityProvider{
 
@@ -46,4 +49,11 @@ public class BlockActivationCatalyst extends Block implements ITileEntityProvide
         return false;
     }
 
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9){
+        player.openGui(Reference.MOD_ID, 0, world, x, y, z);
+        LogHelper.info("GUI");
+        return true;
+    }
+
 }
+

@@ -5,4 +5,6 @@ public interface IProxy
     public void registerRenderThings();
 
     public void registerTileEntities();
+
+    public void registerNetworkStuff();
 }

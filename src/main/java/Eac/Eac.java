@@ -12,7 +12,6 @@ import Eac.reference.Reference;
 import Eac.util.LogHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -35,6 +34,9 @@ public class Eac
 
     @Mod.Instance(Reference.MOD_ID)
     public static Eac mobInstance;
+
+    @Mod.Instance(Reference.MOD_ID)
+    public static Eac guiInstance;
 
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
@@ -110,6 +112,7 @@ public class Eac
 	{
         ic2Recipes.init();
         achievements.init();
+        proxy.registerNetworkStuff();
         proxy.registerTileEntities();
         LogHelper.info("*teleports through the dimensions*");
 	}
