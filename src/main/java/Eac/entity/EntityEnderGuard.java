@@ -2,10 +2,7 @@ package Eac.entity;
 
 import Eac.init.ModItems;
 import net.minecraft.entity.monster.EntityEnderman;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 

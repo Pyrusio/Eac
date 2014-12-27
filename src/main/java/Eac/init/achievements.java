@@ -5,7 +5,6 @@ import Eac.event.EacOnItemPickup;
 import cpw.mods.fml.common.FMLCommonHandler;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
-import net.minecraftforge.common.MinecraftForge;
 
 public class achievements extends Eac
 {

@@ -3,8 +3,6 @@ package Eac.tabs;
 import Eac.Eac;
 import Eac.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 public class Main extends Eac

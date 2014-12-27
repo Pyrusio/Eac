@@ -3,7 +3,6 @@ package Eac.event;
 import Eac.Eac;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
-import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
 public class EacOnItemPickup extends Eac {

@@ -1,7 +1,6 @@
 package Eac.block;
 
 import Eac.Eac;
-import Eac.reference.RegisterHelper;
 
 public class BlockEac extends Eac {
     public static void init() {

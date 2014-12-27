@@ -1,6 +1,5 @@
 package Eac.block.MetaDataItem;
 
-import Eac.item.ItemEac;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
