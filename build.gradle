@@ -22,7 +22,7 @@ group= "nl.the-eac.abchrisabc" // http://maven.apache.org/guides/mini/guide-nami
 archivesBaseName = "Eac"
 
 minecraft {
-    version = "1.7.10-10.13.2.1272"
+    version = "1.7.10-10.13.3.1401-1710ls"
 //    runDir = "idea/assets"
 }
 
