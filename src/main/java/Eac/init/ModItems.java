@@ -1,6 +1,15 @@
 package Eac.init;
 
-import Eac.item.*;
+import Eac.item.Air.ItemDustAir;
+import Eac.item.Air.ItemDustAirActiv;
+import Eac.item.Air.ItemIngotAir;
+import Eac.item.ItemEac;
+import Eac.item.Other.ItemEnderPerlite;
+import Eac.item.Other.ItemEnderStar;
+import Eac.item.Shadow.ItemCDustShadow;
+import Eac.item.Shadow.ItemDustShadow;
+import Eac.item.Shadow.ItemIngotShadow;
+import Eac.item.Shadow.ItemPDustShadow;
 import Eac.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 

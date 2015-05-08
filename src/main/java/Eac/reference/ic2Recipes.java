@@ -10,15 +10,15 @@ import net.minecraft.nbt.NBTTagCompound;
 public class ic2Recipes {
     public static void init()
     {
-        NBTTagCompound oreWashData = new NBTTagCompound();
-        oreWashData.setInteger("amount", 2000);
-        NBTTagCompound oreThermData = new NBTTagCompound();
-        oreThermData.setInteger("minHeat", 3500);
+        NBTTagCompound oreWashDataShadow = new NBTTagCompound();
+        oreWashDataShadow.setInteger("amount", 2000);
+        NBTTagCompound oreThermDataShadow = new NBTTagCompound();
+        oreThermDataShadow.setInteger("minHeat", 3500);
 
+        Recipes.macerator.addRecipe(new RecipeInputItemStack(new ItemStack(BlockEac.benderperlite)), null, new ItemStack(ModItems.enderperlite, 2));
         Recipes.macerator.addRecipe(new RecipeInputItemStack(new ItemStack(BlockEac.oreShadow)), null, new ItemStack(ModItems.cdustShadow, 2));
         Recipes.macerator.addRecipe(new RecipeInputItemStack(new ItemStack(BlockEac.oreAir)), null, new ItemStack(ModItems.dustAir, 2));
-        Recipes.oreWashing.addRecipe(new RecipeInputItemStack(new ItemStack(ModItems.cdustShadow)), oreWashData, new ItemStack(ModItems.pdustShadow));
-        Recipes.centrifuge.addRecipe(new RecipeInputItemStack(new ItemStack(ModItems.pdustShadow)), oreThermData, new ItemStack(ModItems.dustShadow));
-
+        Recipes.oreWashing.addRecipe(new RecipeInputItemStack(new ItemStack(ModItems.cdustShadow)), oreWashDataShadow, new ItemStack(ModItems.pdustShadow));
+        Recipes.centrifuge.addRecipe(new RecipeInputItemStack(new ItemStack(ModItems.pdustShadow)), oreThermDataShadow, new ItemStack(ModItems.dustShadow));
     }
 }
