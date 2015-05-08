@@ -1,7 +1,7 @@
 package Eac.implement;
 
 import Eac.init.ModItems;
-import com.pahimar.ee3.api.EnergyValueRegistryProxy;
+import com.pahimar.ee3.api.exchange.EnergyValueRegistryProxy;
 
 public class EE3 {
     public static void preInit() {
