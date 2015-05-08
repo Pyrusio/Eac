@@ -27,7 +27,7 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.util.EnumHelper;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = "Eac.client.gui.GuiFactory")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = "Eac.client.gui.GuiFactory", dependencies = "after:EE3;after:IC2")
 public class Eac
 {
     @Mod.Instance("Eac")
