@@ -1,6 +1,7 @@
 package Eac.entity;
 
 import Eac.init.ModItems;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.item.Item;
 import net.minecraft.world.EnumDifficulty;
@@ -10,6 +11,14 @@ public class EntityEnderGuard extends EntityEnderman {
 
     public EntityEnderGuard(World par1World) {
         super(par1World);
+    }
+
+    @Override
+    protected void applyEntityAttributes() {
+        super.applyEntityAttributes();
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(75.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.30000001192092896D);
+        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(14.0D);
     }
 
     @Override

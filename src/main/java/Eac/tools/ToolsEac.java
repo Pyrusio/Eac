@@ -1,7 +1,13 @@
 package Eac.tools;
 
 import Eac.Eac;
-import Eac.tools.armor.*;
+import Eac.tools.Air.*;
+import Eac.tools.EnderPerlite.*;
+import Eac.tools.Other.ItemAerSword;
+import Eac.tools.Other.ItemBladedBlood;
+import Eac.tools.Shadow.*;
+import Eac.tools.armor.ItemAirArmor;
+import Eac.tools.armor.ItemShadowArmor;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ToolsEac extends Eac
@@ -23,6 +29,12 @@ public class ToolsEac extends Eac
 		shadowsword = new ItemShadowSword(shadowToolMaterial);
 		shadowspade = new ItemShadowSpade(shadowToolMaterial);
 		shadowhoe = new ItemShadowHoe(shadowToolMaterial);
+		// Enderperlite Tools
+		endperpick = new ItemEndPerPick(enderperliteToolMaterial);
+		endperaxe = new ItemEndPerAxe(enderperliteToolMaterial);
+		endpersword = new ItemEndPerSword(enderperliteToolMaterial);
+		endperspade = new ItemEndPerSpade(enderperliteToolMaterial);
+		endperhoe = new ItemEndPerHoe(enderperliteToolMaterial);
 		// Air Armor
 		airHelmet = new ItemAirArmor(airArmorMaterial, 0, "airHelmet");
 		airChestPlate = new ItemAirArmor(airArmorMaterial, 1, "airChestPlate");
@@ -33,7 +45,7 @@ public class ToolsEac extends Eac
 		shadowChestPlate = new ItemShadowArmor(shadowArmorMaterial, 1, "shadowChestPlate");
 		shadowLegs = new ItemShadowArmor(shadowArmorMaterial, 2, "shadowLegs");
 		shadowBoots = new ItemShadowArmor(shadowArmorMaterial, 3, "shadowBoots");
-
+		// Enderperlite Armor
 		// Misc Tools
 		GameRegistry.registerItem(bladedblood, "Dead_Blood_Blade");
 		GameRegistry.registerItem(aersword, "Aerial_Sword");
@@ -49,6 +61,12 @@ public class ToolsEac extends Eac
 		GameRegistry.registerItem(shadowsword, "Shadow_Sword");
 		GameRegistry.registerItem(shadowspade, "Shadow_Shovel");
 		GameRegistry.registerItem(shadowhoe, "Shadow_Hoe");
+		// Enderperlite Tools
+		GameRegistry.registerItem(endperpick, "Enderperlite_Pickaxe");
+		GameRegistry.registerItem(endperaxe, "Enderperlite_Axe");
+		GameRegistry.registerItem(endpersword, "Enderperlite_Sword");
+		GameRegistry.registerItem(endperspade, "Enderperlite_Shovel");
+		GameRegistry.registerItem(endperhoe, "Enderperlite_Hoe");
 		// Air Armor
 		GameRegistry.registerItem(airHelmet, "Air_Helmet");
 		GameRegistry.registerItem(airChestPlate, "Air_Chestplate");
