@@ -52,8 +52,8 @@ minecraft {
 
     replaceIn "reference/Reference.java"
     replace "@MOD_VERSION@", "${config.mod_version}.${config.build}"
-    if (project.hasProperty("ee3_sha1_signature")) {
-        replace "@FINGERPRINT@", project.ee3_sha1_signature
+    if (project.hasProperty("eac_sha1_signature")) {
+        replace "@FINGERPRINT@", project.eac_sha1_signature
     }
 }
 
@@ -120,13 +120,13 @@ if (!project.hasProperty("keystore_location")) // keystore stuff
     ext.keystore_location = "."
 if (!project.hasProperty("keystore_password")) // keystore stuff
     ext.keystore_password = ""
-if (!project.hasProperty("ee3_keystore_alias")) // keystore stuff
-    ext.ee3_keystore_alias = ""
+if (!project.hasProperty("eac_keystore_alias")) // keystore stuff
+    ext.eac_keystore_alias = ""
 
 task signJar(dependsOn: ["reobf", "devJar"]) {
     inputs.dir jar.destinationDir
     inputs.file keystore_location
-    inputs.property "ee3_keystore_alias", ee3_keystore_alias
+    inputs.property "eac_keystore_alias", eac_keystore_alias
     inputs.property "keystore_password", keystore_password
     outputs.dir devJar.destinationDir
 
@@ -145,7 +145,7 @@ task signJar(dependsOn: ["reobf", "devJar"]) {
                     destDir: file.getParentFile(), // same place it came from
                     jar: file,
                     keystore: keystore_location,
-                    alias: ee3_keystore_alias,
+                    alias: eac_keystore_alias,
                     storepass: keystore_password
             )
         }
