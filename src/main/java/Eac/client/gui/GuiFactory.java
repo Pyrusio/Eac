@@ -1,16 +1,15 @@
 package Eac.client.gui;
 
-/*import cpw.mods.fml.client.IModGuiFactory;
+import cpw.mods.fml.client.IModGuiFactory;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 
-import java.util.Set;*/
+import java.util.Set;
 
-public class GuiFactory //implements IModGuiFactory
+public class GuiFactory implements IModGuiFactory
 {
-/*
     @Override
-    public void initialize(Minecraft minecraftInstance)
+    public void initialize(Minecraft minecraft)
     {
 
     }
@@ -32,5 +31,4 @@ public class GuiFactory //implements IModGuiFactory
     {
         return null;
     }
-*/
 }

@@ -10,7 +10,7 @@ import java.io.File;
 public class ConfigHandler
 {
     public static Configuration configuration;
-    public static boolean testValue = false;
+    //public static boolean testValue = false;
     public static String oreShadowC = "oreMeurodite";
     public static String oreAirC = "orePlatinum";
     public static String itemPerliteC = "gemMythril";
@@ -29,7 +29,7 @@ public class ConfigHandler
     }
 
     private static void loadConfiguration() {
-        testValue = configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "This is an example configuration value");
+        //testValue = configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "This is an example configuration value");
         oreAirC = configuration.getString("oreAir", Configuration.CATEGORY_GENERAL, "orePlatinum", "Define here the Ore dictionary name of Air Ore");
         ingotAirC = configuration.getString("ingotAir", Configuration.CATEGORY_GENERAL, "ingotPlatinum", "Define here the Ore dictionary name of Air Ingot");
         oreShadowC = configuration.getString("oreShadow", Configuration.CATEGORY_GENERAL, "oreMeurodite", "Define here the Ore dictionary name of Shadow Ore");

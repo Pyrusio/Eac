@@ -27,7 +27,7 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.util.EnumHelper;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = "Eac.client.gui.GuiFactory", dependencies = "after:EE3;after:IC2")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = Reference.GUI_FACTORY_CLASS, dependencies = Reference.DEDPENDENCIES)
 public class Eac
 {
     @Mod.Instance("Eac")
@@ -72,7 +72,12 @@ public class Eac
 	public static Item shadowChestPlate;
 	public static Item shadowLegs;
 	public static Item shadowBoots;
-    // Block
+	// Enderperlite Armor
+	public static Item endperHelmet;
+	public static Item endperChestPlate;
+	public static Item endperLegs;
+	public static Item endperBoots;
+	// Block
 	public static Block airIngotBlock;
 	public static Block shadowIngotBlock;
 	public static Block airDustBlock;
@@ -92,10 +97,9 @@ public class Eac
 	protected static ToolMaterial shadowToolMaterial = EnumHelper.addToolMaterial("ShadowTool", 4, 1850, 13.5F, 4.0F, 17);
 	protected static ToolMaterial enderperliteToolMaterial = EnumHelper.addToolMaterial("EnderPerlite", 5, 2250, 15.0F, 5.0F, 21);
 	protected static ToolMaterial enderblood = EnumHelper.addToolMaterial("EnderBlood", 6, 20000, 13.0F, 14.5F, 30);
-	protected static ArmorMaterial airArmorMaterial = EnumHelper.addArmorMaterial("AirArmor", 45, new int[]
-			{3, 8, 6, 3}, 30);
-	protected static ArmorMaterial shadowArmorMaterial = EnumHelper.addArmorMaterial("ShadowArmor", 55, new int[]
-			{5, 8, 7, 4}, 35);
+	protected static ArmorMaterial airArmorMaterial = EnumHelper.addArmorMaterial("AirArmor", 45, new int[]{3, 8, 6, 3}, 30);
+	protected static ArmorMaterial shadowArmorMaterial = EnumHelper.addArmorMaterial("ShadowArmor", 55, new int[]{5, 8, 7, 4}, 35);
+	protected static ArmorMaterial endperArmorMaterial = EnumHelper.addArmorMaterial("EnderperliteArmor", 65, new int[]{7, 10, 8, 5}, 40);
 
     @EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -127,8 +131,9 @@ public class Eac
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-        LogHelper.info("Done Stealing Air and Shadow Blocks from Steve, Throwing away useless diamonds");
-        LogHelper.info("*Teleports back to the End*");
+		ApiLoader.postInit();
+		LogHelper.info("Done Stealing Air and Shadow Blocks from Steve, Throwing away useless diamonds");
+		LogHelper.info("*Teleports back to the End*");
 	}
 
 }

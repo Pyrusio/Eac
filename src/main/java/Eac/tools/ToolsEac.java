@@ -7,6 +7,7 @@ import Eac.tools.Other.ItemAerSword;
 import Eac.tools.Other.ItemBladedBlood;
 import Eac.tools.Shadow.*;
 import Eac.tools.armor.ItemAirArmor;
+import Eac.tools.armor.ItemEndPerArmor;
 import Eac.tools.armor.ItemShadowArmor;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -46,6 +47,10 @@ public class ToolsEac extends Eac
 		shadowLegs = new ItemShadowArmor(shadowArmorMaterial, 2, "shadowLegs");
 		shadowBoots = new ItemShadowArmor(shadowArmorMaterial, 3, "shadowBoots");
 		// Enderperlite Armor
+		endperHelmet = new ItemEndPerArmor(endperArmorMaterial, 0, "endperHelmet");
+		endperChestPlate = new ItemEndPerArmor(endperArmorMaterial, 1, "endperChestPlate");
+		endperLegs = new ItemEndPerArmor(endperArmorMaterial, 2, "endperLegs");
+		endperBoots = new ItemEndPerArmor(endperArmorMaterial, 3, "endperBoots");
 		// Misc Tools
 		GameRegistry.registerItem(bladedblood, "Dead_Blood_Blade");
 		GameRegistry.registerItem(aersword, "Aerial_Sword");
@@ -77,7 +82,11 @@ public class ToolsEac extends Eac
 		GameRegistry.registerItem(shadowChestPlate, "Shadow_Chestplate");
 		GameRegistry.registerItem(shadowLegs, "Shadow_Leggings");
 		GameRegistry.registerItem(shadowBoots, "Shadow_Boots");
-
+		// Enderperlite Armor
+		GameRegistry.registerItem(endperHelmet, "EnderPerlite_Helmet");
+		GameRegistry.registerItem(endperChestPlate, "EnderPerlite_Chestplate");
+		GameRegistry.registerItem(endperLegs, "EnderPerlite_Leggings");
+		GameRegistry.registerItem(endperBoots, "EnderPerlite_Boots");
 	}
 
 }
