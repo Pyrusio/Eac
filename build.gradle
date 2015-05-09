@@ -15,20 +15,15 @@ buildscript {
     }
 }
 
+apply plugin: 'java'
+apply plugin: 'forge'
+apply plugin: 'curseforge'
+apply plugin: 'maven'
+
 repositories {
     maven { url = "http://mobiusstrip.eu/maven" }
     maven { url = "http://chickenbones.net/maven/" }
     maven { url = "http://maven.ic2.player.to/" }
-}
-
-apply plugin: 'forge'
-
-version = "1.7.10-v2.0.0-pre1"
-group= "nl.the-eac.abchrisabc" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "Eac"
-
-minecraft {
-    version = "1.7.10-10.13.3.1403-1.7.10"
 }
 
 dependencies {
@@ -40,24 +35,205 @@ dependencies {
     compile "codechicken:NotEnoughItems:1.7.10-1.0.3.74:dev"
 }
 
-processResources
-{
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
+ext.configFile = file "build.properties"
 
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-                
-        expand 'version':project.version, 'mcversion':project.minecraft.version
-    }
-        
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
+configFile.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse prop
+}
+
+version = config.mod_version
+group = "nl.the-eac.eac" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "Eac"
+
+minecraft {
+    version = config.minecraft_version + "-" + config.forge_version
+
+    replaceIn "reference/Reference.java"
+    replace "@MOD_VERSION@", "${config.mod_version}.${config.build}"
+    if (project.hasProperty("ee3_sha1_signature")) {
+        replace "@FINGERPRINT@", project.ee3_sha1_signature
     }
 }
 
-sourceSets { 
-	main { 
-		output.resourcesDir = output.classesDir 
-	} 
+version = "${config.minecraft_version}-${config.mod_version}.${config.build}"
+
+processResources {
+    // exclude xcf files, as they are for development only
+    exclude '**/*.xcf'
+
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include '*.info'
+
+        // replace version and mcversion
+        expand 'mod_version': project.version, 'minecraft_version': project.config.minecraft_version
+    }
+
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude '**/*.info'
+    }
+}
+
+task devJar(type: Jar, dependsOn: 'classes') {
+    from(sourceSets.main.output) {
+        include '**'
+    }
+
+    extension = 'jar'
+    classifier = 'dev'
+}
+
+artifacts {
+    archives devJar
+}
+
+import net.minecraftforge.gradle.delayed.DelayedFile
+import net.minecraftforge.gradle.delayed.DelayedString
+import net.minecraftforge.gradle.tasks.dev.ChangelogTask
+
+task createChangelog(type: ChangelogTask) {
+
+    if (("${System.getenv().JOB_NAME}" != null) && project.hasProperty("jenkins_server") && project.hasProperty("jenkins_password")) {
+        def jobName = "${System.getenv().JOB_NAME}"
+        def buildNumber = "${System.getenv().BUILD_NUMBER}"
+
+        setServerRoot(new DelayedString(project, project.jenkins_server))
+        setJobName(new DelayedString(project, jobName.toString()))
+        setAuthName(new DelayedString(project, project.jenkins_user))
+        setAuthPassword(new DelayedString(project, project.jenkins_password))
+        setTargetBuild({ buildNumber.toString() });
+        setOutput(new DelayedFile(project, 'build/libs/' + project.archivesBaseName + '-' + project.version + '-changelog.txt'));
+    }
+
+    onlyIf {
+        return (("${System.getenv().JOB_NAME}" != null) && project.hasProperty("jenkins_server") && project.hasProperty("jenkins_password"))
+    }
+}
+
+tasks.build.dependsOn('createChangelog')
+tasks.build.dependsOn('signJar')
+
+if (!project.hasProperty("keystore_location")) // keystore stuff
+    ext.keystore_location = "."
+if (!project.hasProperty("keystore_password")) // keystore stuff
+    ext.keystore_password = ""
+if (!project.hasProperty("ee3_keystore_alias")) // keystore stuff
+    ext.ee3_keystore_alias = ""
+
+task signJar(dependsOn: ["reobf", "devJar"]) {
+    inputs.dir jar.destinationDir
+    inputs.file keystore_location
+    inputs.property "ee3_keystore_alias", ee3_keystore_alias
+    inputs.property "keystore_password", keystore_password
+    outputs.dir devJar.destinationDir
+
+    // only sign if the keystore exists
+    onlyIf {
+        return keystore_location != "." && keystore_password != ""
+    }
+    // the actual action.. sign the jar.
+    doLast {
+        jar.destinationDir.eachFile { file ->
+            if (!file.getPath().endsWith(".jar"))
+                return; // skip non-jars
+
+            logger.lifecycle "signing $file"
+            ant.signjar(
+                    destDir: file.getParentFile(), // same place it came from
+                    jar: file,
+                    keystore: keystore_location,
+                    alias: ee3_keystore_alias,
+                    storepass: keystore_password
+            )
+        }
+    }
+}
+
+task copyChicken(type: Copy, dependsOn: "extractUserDev") {
+    from { configurations.compile }
+    include "**/*Chicken*.jar", "**/*NotEnoughItems*.jar"
+    exclude "**/CodeChickenLib*" // because CCC downloads it anyways.. -_-
+    into file("./run/mods") // paralell to the assets dir
+    mustRunAfter "deobfBinJar"
+    mustRunAfter "repackMinecraft"
+}
+tasks.setupDevWorkspace.dependsOn copyChicken
+tasks.setupDecompWorkspace.dependsOn copyChicken
+
+curse {
+    dependsOn 'reobf'
+    onlyIf { return project.hasProperty('eac_curseforge_apikey') }
+
+    projectId = '223255'
+    apiKey = project.hasProperty('eac_curseforge_apikey') ? project.eac_curseforge_apikey : ''
+    changelog = project.hasProperty('changelog') ? project.changelog : ''
+    releaseType = config.release_type
+
+    additionalArtifact devJar
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            if (project.hasProperty("forgemaven_url")) {
+                logger.info('Publishing to files server')
+                repository(url: project.forgemaven_url) {
+                    authentication(userName: project.forgemaven_username, password: project.forgemaven_password)
+                }
+            }
+
+            pom {
+                groupId = project.group
+                version = project.version
+                artifactId = project.archivesBaseName
+            }
+
+            pom.project {
+                name project.archivesBaseName
+                packaging 'jar'
+                description 'Enders Aerial Cast'
+                url 'https://github.com/EacMods/Eac/'
+
+                scm {
+                    url 'https://github.com/EacMods/Eac'
+                    connection 'scm:git:git://github.com/EacMods/Eac.git'
+                    developerConnection 'scm:git:git@github.com/EacMods/Eac.git'
+                }
+
+                issueManagement {
+                    system 'github'
+                    url 'https://github.com/EacMods/Eac/issues'
+                }
+
+                licenses {
+                    license {
+                        name 'GNU Lesser General Public License 3.0'
+                        url 'https://www.gnu.org/licenses/lgpl-3.0.txt'
+                        distribution 'repo'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'Abchrisabc'
+                        name 'Abchrisabc'
+                        roles {
+                            role 'developer'
+                        }
+                    }
+                    developer {
+                        id 'jasperfirecai2'
+                        name 'jasperfirecai2'
+                        roles {
+                            role 'texturer'
+                        }
+                    }
+
+                }
+            }
+        }
+    }
 }
