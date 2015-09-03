@@ -95,7 +95,7 @@ public class Eac
 	protected static ToolMaterial aerial = EnumHelper.addToolMaterial("Aerial", 4, 1600, 12.0F, 8.5F, 30);
 	protected static ToolMaterial airToolMaterial = EnumHelper.addToolMaterial("AirTool", 3, 1600, 12.0F, 3.0F, 13);
 	protected static ToolMaterial shadowToolMaterial = EnumHelper.addToolMaterial("ShadowTool", 4, 1850, 13.5F, 4.0F, 17);
-	protected static ToolMaterial enderperliteToolMaterial = EnumHelper.addToolMaterial("EnderPerlite", 5, 2250, 15.0F, 5.0F, 21);
+	protected static ToolMaterial enderPerliteToolMaterial = EnumHelper.addToolMaterial("EnderPerlite", 5, 2250, 15.0F, 5.0F, 21);
 	protected static ToolMaterial enderblood = EnumHelper.addToolMaterial("EnderBlood", 6, 20000, 13.0F, 14.5F, 30);
 	protected static ArmorMaterial airArmorMaterial = EnumHelper.addArmorMaterial("AirArmor", 45, new int[]{3, 8, 6, 3}, 30);
 	protected static ArmorMaterial shadowArmorMaterial = EnumHelper.addArmorMaterial("ShadowArmor", 55, new int[]{5, 8, 7, 4}, 35);

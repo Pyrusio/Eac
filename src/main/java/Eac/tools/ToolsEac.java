@@ -31,11 +31,11 @@ public class ToolsEac extends Eac
 		shadowspade = new ItemShadowSpade(shadowToolMaterial);
 		shadowhoe = new ItemShadowHoe(shadowToolMaterial);
 		// Enderperlite Tools
-		endperpick = new ItemEndPerPick(enderperliteToolMaterial);
-		endperaxe = new ItemEndPerAxe(enderperliteToolMaterial);
-		endpersword = new ItemEndPerSword(enderperliteToolMaterial);
-		endperspade = new ItemEndPerSpade(enderperliteToolMaterial);
-		endperhoe = new ItemEndPerHoe(enderperliteToolMaterial);
+		endperpick = new ItemEndPerPick(enderPerliteToolMaterial);
+		endperaxe = new ItemEndPerAxe(enderPerliteToolMaterial);
+		endpersword = new ItemEndPerSword(enderPerliteToolMaterial);
+		endperspade = new ItemEndPerSpade(enderPerliteToolMaterial);
+		endperhoe = new ItemEndPerHoe(enderPerliteToolMaterial);
 		// Air Armor
 		airHelmet = new ItemAirArmor(airArmorMaterial, 0, "airHelmet");
 		airChestPlate = new ItemAirArmor(airArmorMaterial, 1, "airChestPlate");
