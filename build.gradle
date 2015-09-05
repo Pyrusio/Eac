@@ -22,7 +22,7 @@ apply plugin: 'maven'
 
 repositories {
     maven { url = "http://mobiusstrip.eu/maven" }
-    // maven { url = "http://chickenbones.net/maven/" }
+    maven { url = "http://chickenbones.net/maven/" }
     maven { url = "http://maven.ic2.player.to/" }
 }
 
