@@ -34,6 +34,11 @@ public class OtherR extends Recipes{
                 " B ",
                 "III",
                 'D', ModItems.dustAir, 'X', featherblock, 'F', Items.feather, 'B', Blocks.iron_block, 'I', Items.iron_ingot});
+        GameRegistry.addRecipe(new ItemStack(featherblock, 1), new Object[]{
+                "FFF",
+                "F F",
+                "FFF",
+                'F', Items.feather});
     }
 
     public static void shapeless(){
