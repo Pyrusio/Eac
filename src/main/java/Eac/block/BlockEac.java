@@ -22,8 +22,10 @@ public class BlockEac extends Eac {
         aAirDustBlock = new BlockDustaAir();
         benderperlite = new BlockEnderPerlite();
         featherblock = new BlockFeather();
-        // activationcatalyst = new BlockActivationCatalyst();
         softfaller = new BlockSoftfall();
+
+        // TODO Fix Gui Bug activationcatalyst
+        // activationcatalyst = new BlockActivationCatalyst();
     }
 
 }

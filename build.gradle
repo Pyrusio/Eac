@@ -237,3 +237,5 @@ uploadArchives {
         }
     }
 }
+
+idea { module { inheritOutputDirs = true } }
