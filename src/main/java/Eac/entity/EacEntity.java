@@ -20,7 +20,7 @@ public class EacEntity {
 
         EntityRegistry.registerGlobalEntityID(entityClass, entityName, randomId);
         EntityRegistry.registerModEntity(entityClass, entityName, randomId, Eac.mobInstance, 64, 1, true);
-        EntityRegistry.addSpawn(entityClass, 2, 0, 7, EnumCreatureType.monster, BiomeGenBase.extremeHills.jungle.forest.desert.sky.plains);
+        EntityRegistry.addSpawn(entityClass, 2, 0, 7, EnumCreatureType.monster, BiomeGenBase.sky);
         createEgg(randomId, solidColor, spotColor);
     }
 
