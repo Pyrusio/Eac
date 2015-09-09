@@ -1,21 +1,25 @@
 package Eac.block.Other;
 
 import Eac.block.Other.MetaDataItem.ItemBlockSoftfall;
+import Eac.block.Other.tileentity.TileEntitySoftFall;
 import Eac.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.World;
 
 import java.util.List;
 
-public class BlockSoftfall extends Block {
+public class BlockSoftfall extends Block implements ITileEntityProvider {
 
     private String privateName = "softFaller";
     private int maxMeta = 8;
@@ -84,4 +88,14 @@ public class BlockSoftfall extends Block {
             list.add(new ItemStack(item, 1, i));
         }
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
+        return new TileEntitySoftFall();
+    }
+
+    public boolean hasTileEntity(int metadata) {
+        return true;
+    }
+
 }
