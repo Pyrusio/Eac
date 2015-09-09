@@ -51,7 +51,8 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-
+#Temporary files
+~$*
 #eclipse
 *.project
 *.classpath
