@@ -4,13 +4,11 @@ import Eac.item.Air.ItemDustAir;
 import Eac.item.Air.ItemDustAirActiv;
 import Eac.item.Air.ItemIngotAir;
 import Eac.item.ItemEac;
-import Eac.item.Other.ItemEnderPerlite;
-import Eac.item.Other.ItemEnderStar;
+import Eac.item.Other.*;
 import Eac.item.Shadow.ItemCDustShadow;
 import Eac.item.Shadow.ItemDustShadow;
 import Eac.item.Shadow.ItemIngotShadow;
 import Eac.item.Shadow.ItemPDustShadow;
-import Eac.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 
@@ -28,6 +26,9 @@ public class ModItems
     // Ender
     public static final ItemEac enderstar = new ItemEnderStar();
     public static final ItemEac enderperlite = new ItemEnderPerlite();
+    public static final ItemEac mEnderperlite = new ItemMoltenEnderPerlite();
+    public static final ItemEac cEnderperlite = new ItemCutEnderPerlite();
+    public static final ItemEac iEnderperlite = new ItemIngotEnderPerlite();
 
     public static void init()
     {
@@ -43,5 +44,8 @@ public class ModItems
         // Ender
         GameRegistry.registerItem(enderstar, "Enderstar");
         GameRegistry.registerItem(enderperlite, "Ender_Perlite");
+        GameRegistry.registerItem(mEnderperlite, "Ender_Perlite_Molten");
+        GameRegistry.registerItem(cEnderperlite, "Ender_Perlite_Cut");
+        GameRegistry.registerItem(iEnderperlite, "Ender_Perlite_Ingot");
     }
 }
