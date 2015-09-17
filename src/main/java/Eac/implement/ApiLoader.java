@@ -15,7 +15,7 @@ public class ApiLoader{
 
     public static void init() {
         if (Loader.isModLoaded("IC2")){ic2Recipes.init();}
-        else {LogHelper.fatal("IC2 Not Found you should add it if you want to make things.");}
+        else {LogHelper.fatal("IC2 Not Found. You really didn't want a challenge did you? For an added challenge, you should add it!");}
         if (Loader.isModLoaded("test")){LogHelper.info("test successfull");}
     }
 

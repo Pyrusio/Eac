@@ -55,7 +55,7 @@ public class EE3 {
 
         //Minecraft items
         EnergyValueRegistryProxy.addPreAssignedEnergyValue(Blocks.dragon_egg, 33554432.0F);
-        // TODO Add more EE3 EMC Values
+        //TODO Fix tools not registering stick EMC
     }
 
     public static void init() {
