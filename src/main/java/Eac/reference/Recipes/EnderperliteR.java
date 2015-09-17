@@ -91,19 +91,31 @@ public class EnderperliteR extends Recipes{
                 "GSD",
                 'F', Items.flint_and_steel, 'D', Items.diamond, 'M', ModItems.mEnderperlite, 'X', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
         });
-        //TODO Should only be when ic2 is missing
+    }
+    public static void shapeless(){
+
+    }
+
+    // No Other Compatible Mods for Custom crafting, using Vanilla Recipes now.
+    public static void nocm(){
         GameRegistry.addRecipe(new ItemStack(ModItems.ingotEnderperlite), new Object[]{
                 "IWI",
                 "CCC",
                 "IWI",
                 'I', Blocks.ice , 'W', Items.water_bucket, 'C', ModItems.cEnderperlite
         });
-
-    }
-    public static void shapeless(){
-
-
-
+        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite), new Object[]{
+                "FDF",
+                "DCL",
+                "GSG",
+                'F', Items.flint_and_steel, 'D', Items.diamond, 'C', ModItems.mEnderperlite, 'L', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
+        });
+        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite), new Object[]{
+                "FDF",
+                "LCD",
+                "GSG",
+                'F', Items.flint_and_steel, 'D', Items.diamond, 'C', ModItems.mEnderperlite, 'L', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
+        });
 
         //Smelting
         GameRegistry.addSmelting(new ItemStack(ModItems.enderperlite), new ItemStack(ModItems.mEnderperlite), 8.0F);

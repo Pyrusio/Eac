@@ -44,4 +44,8 @@ public class OtherR extends Recipes{
 
     public static void shapeless(){
     }
+
+    // No Other Compatible Mods for Custom crafting, using Vanilla Recipes now.
+    public static void nocm(){
+    }
 }

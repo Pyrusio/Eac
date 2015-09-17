@@ -85,4 +85,8 @@ public class ShadowR extends Recipes{
         // Smelting Recipes
         GameRegistry.addSmelting(new ItemStack(ModItems.dustShadow), new ItemStack(ModItems.ingotShadow), 2.0F);
     }
+
+    // No Other Compatible Mods for Custom crafting, using Vanilla Recipes now.
+    public static void nocm(){
+    }
 }
