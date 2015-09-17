@@ -28,7 +28,7 @@ public class ModItems
     public static final ItemEac enderperlite = new ItemEnderPerlite();
     public static final ItemEac mEnderperlite = new ItemMoltenEnderPerlite();
     public static final ItemEac cEnderperlite = new ItemCutEnderPerlite();
-    public static final ItemEac iEnderperlite = new ItemIngotEnderPerlite();
+    public static final ItemEac ingotEnderperlite = new ItemIngotEnderPerlite();
 
     public static void init()
     {
@@ -46,6 +46,6 @@ public class ModItems
         GameRegistry.registerItem(enderperlite, "Ender_Perlite");
         GameRegistry.registerItem(mEnderperlite, "Ender_Perlite_Molten");
         GameRegistry.registerItem(cEnderperlite, "Ender_Perlite_Cut");
-        GameRegistry.registerItem(iEnderperlite, "Ender_Perlite_Ingot");
+        GameRegistry.registerItem(ingotEnderperlite, "Ender_Perlite_Ingot");
     }
 }

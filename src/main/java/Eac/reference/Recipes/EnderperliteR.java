@@ -1,6 +1,8 @@
 package Eac.reference.Recipes;
 
 import Eac.init.ModItems;
+import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -11,7 +13,7 @@ public class EnderperliteR extends Recipes{
                 "xx",
                 "xx",
                 'x', ModItems.enderperlite});
-
+        //Tools
         GameRegistry.addRecipe(new ItemStack(endperaxe), new Object[]{
                 "EE",
                 "SE",
@@ -54,6 +56,7 @@ public class EnderperliteR extends Recipes{
                 " S",
                 'E', ModItems.enderperlite, 'S', Items.stick
         });
+        //armour
         GameRegistry.addRecipe(new ItemStack(endperHelmet), new Object[]{
                 "EEE",
                 "E E",
@@ -76,7 +79,33 @@ public class EnderperliteR extends Recipes{
                 "E E",
                 'E', ModItems.enderperlite
         });
+        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite), new Object[]{
+                "FDF",
+                "DMX",
+                "GSD",
+                'F', Items.flint_and_steel, 'D', Items.diamond, 'M', ModItems.mEnderperlite, 'X', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
+        });
+        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite), new Object[]{
+                "FDF",
+                "XMD",
+                "GSD",
+                'F', Items.flint_and_steel, 'D', Items.diamond, 'M', ModItems.mEnderperlite, 'X', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
+        });
+        //TODO Should only be when ic2 is missing
+        GameRegistry.addRecipe(new ItemStack(ModItems.ingotEnderperlite), new Object[]{
+                "IWI",
+                "CCC",
+                "IWI",
+                'I', Blocks.ice , 'W', Items.water_bucket, 'C', ModItems.cEnderperlite
+        });
+
     }
     public static void shapeless(){
+
+
+
+
+        //Smelting
+        GameRegistry.addSmelting(new ItemStack(ModItems.enderperlite), new ItemStack(ModItems.mEnderperlite), 8.0F);
     }
 }
