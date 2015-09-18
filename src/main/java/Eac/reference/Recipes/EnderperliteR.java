@@ -79,18 +79,6 @@ public class EnderperliteR extends Recipes{
                 "E E",
                 'E', ModItems.enderperlite
         });
-        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite), new Object[]{
-                "FDF",
-                "DMX",
-                "GSD",
-                'F', Items.flint_and_steel, 'D', Items.diamond, 'M', ModItems.mEnderperlite, 'X', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
-        });
-        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite), new Object[]{
-                "FDF",
-                "XMD",
-                "GSD",
-                'F', Items.flint_and_steel, 'D', Items.diamond, 'M', ModItems.mEnderperlite, 'X', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
-        });
     }
     public static void shapeless(){
 
@@ -104,13 +92,13 @@ public class EnderperliteR extends Recipes{
                 "IWI",
                 'I', Blocks.ice , 'W', Items.water_bucket, 'C', ModItems.cEnderperlite
         });
-        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite), new Object[]{
+        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite, 2), new Object[]{
                 "FDF",
                 "DCL",
                 "GSG",
                 'F', Items.flint_and_steel, 'D', Items.diamond, 'C', ModItems.mEnderperlite, 'L', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
         });
-        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite), new Object[]{
+        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite, 2), new Object[]{
                 "FDF",
                 "LCD",
                 "GSG",
