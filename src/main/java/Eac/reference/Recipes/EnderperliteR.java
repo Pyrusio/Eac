@@ -1,5 +1,6 @@
 package Eac.reference.Recipes;
 
+import Eac.block.BlockEac;
 import Eac.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -79,6 +80,24 @@ public class EnderperliteR extends Recipes{
                 "E E",
                 'E', ModItems.ingotEnderperlite
         });
+        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite, 2), new Object[]{
+                "FDF",
+                "DCL",
+                "GSG",
+                'F', Items.flint_and_steel, 'D', Items.diamond, 'C', ModItems.mEnderperlite, 'L', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
+        });
+        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite, 2), new Object[]{
+                "FDF",
+                "LCD",
+                "GSG",
+                'F', Items.flint_and_steel, 'D', Items.diamond, 'C', ModItems.mEnderperlite, 'L', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
+        });
+        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite, 2), new Object[]{
+                "FLF",
+                "DCD",
+                "GSG",
+                'F', Items.flint_and_steel, 'D', Items.diamond, 'C', ModItems.mEnderperlite, 'L', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
+        });
     }
     public static void shapeless(){
 
@@ -92,19 +111,12 @@ public class EnderperliteR extends Recipes{
                 "IWI",
                 'I', Blocks.ice , 'W', Items.water_bucket, 'C', ModItems.cEnderperlite
         });
-        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite, 2), new Object[]{
-                "FDF",
-                "DCL",
-                "GSG",
-                'F', Items.flint_and_steel, 'D', Items.diamond, 'C', ModItems.mEnderperlite, 'L', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
+        // testing
+        GameRegistry.addRecipe(new ItemStack(ModItems.cdustShadow, 2), new Object[]{
+                "PSP",
+                "RAR",
+                'P', Blocks.piston, 'S', BlockEac.oreShadow, 'R', Blocks.redstone_torch, 'A', Blocks.anvil
         });
-        GameRegistry.addRecipe(new ItemStack(ModItems.cEnderperlite, 2), new Object[]{
-                "FDF",
-                "LCD",
-                "GSG",
-                'F', Items.flint_and_steel, 'D', Items.diamond, 'C', ModItems.mEnderperlite, 'L', Items.flint, 'G', Blocks.gold_block, 'S', Items.diamond_sword
-        });
-
         //Smelting
         GameRegistry.addSmelting(new ItemStack(ModItems.enderperlite), new ItemStack(ModItems.mEnderperlite), 8.0F);
     }

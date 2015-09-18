@@ -1,5 +1,6 @@
 package Eac.reference.Recipes;
 
+import Eac.block.BlockEac;
 import Eac.init.ModItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -94,5 +95,8 @@ public class AirR extends Recipes{
 
     // No Other Compatible Mods for Custom crafting, using Vanilla Recipes now.
     public static void nocm(){
+
+        GameRegistry.addSmelting(new ItemStack(BlockEac.oreAir), new ItemStack(ModItems.dustAir), 1.0F);
+
     }
 }
