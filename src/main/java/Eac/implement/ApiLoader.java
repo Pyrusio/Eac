@@ -15,7 +15,7 @@ public class ApiLoader{
     }
 
     public static void init() {
-        if (Loader.isModLoaded("IC2")){ic2Recipes.init();}
+        if (Loader.isModLoaded("IC2")){ic2Recipes.init(); ic2Recipes.shaped();}
         else {
             LogHelper.fatal("IC2 Not Found. You really didn't want a challenge did you? For an added challenge, you should add it!");
             AirR.nocm();

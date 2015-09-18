@@ -23,4 +23,10 @@ public class ic2Recipes {
         Recipes.centrifuge.addRecipe(new RecipeInputItemStack(new ItemStack(ModItems.enderperlite)), oreThermDataEnderPerlite, new ItemStack(ModItems.mEnderperlite));
         Recipes.oreWashing.addRecipe(new RecipeInputItemStack(new ItemStack(ModItems.cEnderperlite)), oreWashDataEnderPerlite, new ItemStack(ModItems.ingotEnderperlite));
     }
+
+    public static void shaped(){
+        // Only loaded if IC2 Is here
+
+
+    }
 }
