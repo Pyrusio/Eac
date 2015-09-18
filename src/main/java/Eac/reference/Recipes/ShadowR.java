@@ -1,6 +1,8 @@
 package Eac.reference.Recipes;
 
+import Eac.block.BlockEac;
 import Eac.init.ModItems;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -76,5 +78,14 @@ public class ShadowR extends Recipes{
 
     // No Other Compatible Mods for Custom crafting, using Vanilla Recipes now.
     public static void nocm(){
+
+        // testing
+        GameRegistry.addRecipe(new ItemStack(ModItems.cdustShadow, 2), new Object[]{
+                "PSP",
+                "RAR",
+                'P', Blocks.piston, 'S', BlockEac.oreShadow, 'R', Blocks.redstone_torch, 'A', Blocks.anvil
+        });
+
+
     }
 }

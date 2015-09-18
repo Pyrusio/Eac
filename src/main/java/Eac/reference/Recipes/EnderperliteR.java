@@ -111,12 +111,6 @@ public class EnderperliteR extends Recipes{
                 "IWI",
                 'I', Blocks.ice , 'W', Items.water_bucket, 'C', ModItems.cEnderperlite
         });
-        // testing
-        GameRegistry.addRecipe(new ItemStack(ModItems.cdustShadow, 2), new Object[]{
-                "PSP",
-                "RAR",
-                'P', Blocks.piston, 'S', BlockEac.oreShadow, 'R', Blocks.redstone_torch, 'A', Blocks.anvil
-        });
         //Smelting
         GameRegistry.addSmelting(new ItemStack(ModItems.enderperlite), new ItemStack(ModItems.mEnderperlite), 8.0F);
     }
