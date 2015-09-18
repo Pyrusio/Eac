@@ -45,12 +45,6 @@ public class AirR extends Recipes{
         GameRegistry.addRecipe(new ItemStack(airHelmet, 1), new Object[]{
                 "III",
                 "I I",
-                "   ",
-                'I', ModItems.ingotair});
-        GameRegistry.addRecipe(new ItemStack(airHelmet, 1), new Object[]{
-                "   ",
-                "III",
-                "I I",
                 'I', ModItems.ingotair});
         GameRegistry.addRecipe(new ItemStack(airChestPlate, 1), new Object[]{
                 "I I",
@@ -63,12 +57,6 @@ public class AirR extends Recipes{
                 "I I",
                 'I', ModItems.ingotair});
         GameRegistry.addRecipe(new ItemStack(airBoots, 1), new Object[]{
-                "I I",
-                "I I",
-                "   ",
-                'I', ModItems.ingotair});
-        GameRegistry.addRecipe(new ItemStack(airBoots, 1), new Object[]{
-                "   ",
                 "I I",
                 "I I",
                 'I', ModItems.ingotair});

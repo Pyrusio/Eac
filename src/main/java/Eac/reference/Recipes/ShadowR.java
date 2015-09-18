@@ -45,12 +45,6 @@ public class ShadowR extends Recipes{
         GameRegistry.addRecipe(new ItemStack(shadowHelmet, 1), new Object[]{
                 "III",
                 "I I",
-                "   ",
-                'I', ModItems.ingotShadow});
-        GameRegistry.addRecipe(new ItemStack(shadowHelmet, 1), new Object[]{
-                "   ",
-                "III",
-                "I I",
                 'I', ModItems.ingotShadow});
         GameRegistry.addRecipe(new ItemStack(shadowChestPlate, 1), new Object[]{
                 "I I",
@@ -63,12 +57,6 @@ public class ShadowR extends Recipes{
                 "I I",
                 'I', ModItems.ingotShadow});
         GameRegistry.addRecipe(new ItemStack(shadowBoots, 1), new Object[]{
-                "I I",
-                "I I",
-                "   ",
-                'I', ModItems.ingotShadow});
-        GameRegistry.addRecipe(new ItemStack(shadowBoots, 1), new Object[]{
-                "   ",
                 "I I",
                 "I I",
                 'I', ModItems.ingotShadow});
