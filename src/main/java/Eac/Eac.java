@@ -97,9 +97,9 @@ public class Eac
 	protected static ToolMaterial shadowToolMaterial = EnumHelper.addToolMaterial("ShadowTool", 4, 2750, 14.0F, 5.5F, 17);
 	protected static ToolMaterial enderPerliteToolMaterial = EnumHelper.addToolMaterial("EnderPerlite", 5, 4500, 16.0F, 7.0F, 21);
 	protected static ToolMaterial enderblood = EnumHelper.addToolMaterial("EnderBlood", 6, 20000, 20.0F, 14.5F, 30);
-	protected static ArmorMaterial airArmorMaterial = EnumHelper.addArmorMaterial("AirArmor", 50, new int[]{4, 8, 6, 3}, 30);
-	protected static ArmorMaterial shadowArmorMaterial = EnumHelper.addArmorMaterial("ShadowArmor", 65, new int[]{5, 9, 7, 4}, 35);
-	protected static ArmorMaterial endperArmorMaterial = EnumHelper.addArmorMaterial("EnderperliteArmor", 80, new int[]{7, 11, 8, 5}, 45);
+	protected static ArmorMaterial airArmorMaterial = EnumHelper.addArmorMaterial("AirArmor", 50, new int[]{4, 8, 5, 3}, 30);
+	protected static ArmorMaterial shadowArmorMaterial = EnumHelper.addArmorMaterial("ShadowArmor", 65, new int[]{5, 9, 6, 3}, 35);
+	protected static ArmorMaterial endperArmorMaterial = EnumHelper.addArmorMaterial("EnderperliteArmor", 80, new int[]{6, 10, 7, 4}, 45);
 
     @EventHandler
 	public void preInit(FMLPreInitializationEvent event)

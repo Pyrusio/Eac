@@ -5,6 +5,7 @@ import Eac.init.ModItems;
 import Eac.tools.ToolsEac;
 import com.pahimar.ee3.api.exchange.EnergyValueRegistryProxy;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 public class EE3 {
@@ -55,6 +56,7 @@ public class EE3 {
 
         //Minecraft items
         EnergyValueRegistryProxy.addPreAssignedEnergyValue(Blocks.dragon_egg, 33554432.0F);
+        EnergyValueRegistryProxy.addPreAssignedEnergyValue(Items.stick, 4.0F);
         //TODO Fix tools not registering stick EMC
     }
 
