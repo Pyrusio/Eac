@@ -49,7 +49,7 @@ tile.blockaDair.name=Active Air Dust Block
 tile.oreAir.name=Air Ore
 tile.oreShadow.name=Shadow Ore
 tile.featherblock.name=Feather Block
-tile.enderperlite.name= Enderperlite Block
+tile.enderperlite.name=Enderperlite Block
 // TileEntities
 tile.activation_catalyst.name= Activation Catalyst
 // Metadata Blocks
